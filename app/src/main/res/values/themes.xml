@@ -1,0 +1,101 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.OfficeApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+
+
+
+
+        <style name="textView_genral">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:paddingLeft">@dimen/_5sdp</item>
+        <item name="android:layout_marginTop">@dimen/_5sdp</item>
+    </style>
+
+    <style name="textView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+     <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:layout_weight">.4</item>
+        <item name="android:paddingLeft">@dimen/_5sdp</item>
+
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="textView_2">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:layout_weight">.55</item>
+        <item name="android:paddingLeft">@dimen/_5sdp</item>
+
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+
+
+    <style name="round_editText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:layout_weight">.6</item>
+        <item name="android:paddingLeft">@dimen/_5sdp</item>
+        <item name="background">@drawable/round_text_view</item>
+        <item name="android:layout_marginTop">@dimen/_5sdp</item>
+    </style>
+
+
+
+    <style name="icon_view">
+        <item name="android:layout_width">@dimen/_15sdp</item>
+        <item name="android:layout_height">@dimen/_15sdp</item>
+       <item name="android:layout_gravity">center</item>
+        <item name="android:layout_weight">.05</item>
+
+    </style>
+
+    <style name="View_1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/base_color</item>
+        <item name="android:layout_marginTop">@dimen/_5sdp</item>
+    </style>
+
+    <!--<style name="SpinnerTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/spinner_background</item>
+    </style>-->
+
+    <style name="SpinnerTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/spinner_background</item>
+    </style>
+
+    <style name="BubbleTabText">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+
+
+    <style name="CustomDialogTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+</resources>
