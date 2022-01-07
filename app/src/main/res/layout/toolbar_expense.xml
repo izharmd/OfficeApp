@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_50sdp"
+    android:orientation="horizontal"
+    android:weightSum="1"
+    android:background="@color/base_color">
+
+    <TextView
+        android:id="@+id/txtAddOverView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".8"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="@color/white"
+        android:text="Expense Overview"
+        android:gravity="center"></TextView>
+
+    <ImageView
+        android:id="@+id/imvOverView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".2"
+        android:src="@drawable/add_24"></ImageView>
+
+</LinearLayout>

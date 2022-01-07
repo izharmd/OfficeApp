@@ -2,265 +2,293 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/_3sdp"
+    android:weightSum="1">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_marginLeft="@dimen/_5sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginBottom="@dimen/_5sdp"
-        android:orientation="horizontal"
-        android:weightSum="2">
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".12"
+        android:background="@color/white_1">
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight=".8"
-            android:background="@drawable/round_text_view"
-            android:gravity="center|left"
-            android:paddingLeft="@dimen/_10sdp"
-            android:text="Employee Id"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_12sdp"></TextView>
-
-
-        <TextView
-            android:id="@+id/txtEmpId"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.2"
-            android:gravity="center|left"
-            android:paddingLeft="@dimen/_10sdp"
-            android:text="14C1686"
+            android:id="@+id/txtCount"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:text="10"
             android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_gravity="center|top"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:background="@drawable/round_circle_count"
             android:textSize="@dimen/_12sdp"></TextView>
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_marginLeft="@dimen/_5sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginBottom="@dimen/_5sdp"
-        android:orientation="horizontal"
-        android:weightSum="2">
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".8"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".8"
+                android:background="@drawable/round_textview2"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/_5sdp"
+                android:text="Employee Id"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"></TextView>
+
+
+            <TextView
+                android:id="@+id/txtEmpId"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/_10sdp"
+                android:text="14C1686"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".8"
+                android:background="@drawable/round_textview2"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/_5sdp"
+                android:text="Employee Name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"></TextView>
+
+
+            <TextView
+                android:id="@+id/txtEmpName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/_10sdp"
+                android:text="14C1686"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".8"
+                android:background="@drawable/round_textview2"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/_5sdp"
+                android:text="Day's of leave"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"></TextView>
+
+
+            <TextView
+                android:id="@+id/txtDayOfLeave"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/_10sdp"
+                android:text="14C1686"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".8"
+                android:background="@drawable/round_textview2"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/_5sdp"
+                android:text="Leave From"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"></TextView>
+
+
+            <TextView
+                android:id="@+id/txtLeaveFrom"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/_10sdp"
+                android:text="14C1686"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".8"
+                android:background="@drawable/round_textview2"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/_5sdp"
+                android:text="Leave To"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"></TextView>
+
+
+            <TextView
+                android:id="@+id/txtLeaveTo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/_10sdp"
+                android:text="View"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".8"
+                android:background="@drawable/round_textview2"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/_5sdp"
+                android:text="Leave Status"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"></TextView>
+
+
+            <TextView
+                android:id="@+id/txtLeaveStatus"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/_10sdp"
+                android:text="14C1686"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".8"
+                android:background="@drawable/round_textview2"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/_5sdp"
+                android:text="Reason"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"></TextView>
+
+
+            <TextView
+                android:id="@+id/txtReason"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/_10sdp"
+                android:text="14C1686"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"></TextView>
+
+        </LinearLayout>
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight=".8"
-            android:background="@drawable/round_text_view"
-            android:gravity="center|left"
-            android:paddingLeft="@dimen/_10sdp"
-            android:text="Employee Name"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_12sdp"></TextView>
-
-
-        <TextView
-            android:id="@+id/txtEmpName"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.2"
-            android:gravity="center|left"
-            android:paddingLeft="@dimen/_10sdp"
-            android:text="14C1686"
+            android:id="@+id/txtDetails"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="right"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@drawable/round_button_ripple"
+            android:drawableRight="@drawable/next_24"
+            android:gravity="center"
+            android:paddingRight="@dimen/_5sdp"
+            android:text="Details"
             android:textColor="@color/black"
-            android:textSize="@dimen/_12sdp"></TextView>
+            android:textSize="@dimen/_12sdp"
+            android:visibility="gone"></TextView>
 
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_marginLeft="@dimen/_5sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginBottom="@dimen/_5sdp"
-        android:orientation="horizontal"
-        android:weightSum="2">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight=".8"
-            android:background="@drawable/round_text_view"
-            android:gravity="center|left"
-            android:paddingLeft="@dimen/_10sdp"
-            android:text="Day's of leave"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_12sdp"></TextView>
-
-
-        <TextView
-            android:id="@+id/txtDayOfLeave"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.2"
-            android:gravity="center|left"
-            android:paddingLeft="@dimen/_10sdp"
-            android:text="14C1686"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_12sdp"></TextView>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_marginLeft="@dimen/_5sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginBottom="@dimen/_5sdp"
-        android:orientation="horizontal"
-        android:weightSum="2">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight=".8"
-            android:background="@drawable/round_text_view"
-            android:gravity="center|left"
-            android:paddingLeft="@dimen/_10sdp"
-            android:text="Leave From"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_12sdp"></TextView>
-
-
-        <TextView
-            android:id="@+id/txtLeaveFrom"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.2"
-            android:gravity="center|left"
-            android:paddingLeft="@dimen/_10sdp"
-            android:text="14C1686"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_12sdp"></TextView>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_marginLeft="@dimen/_5sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginBottom="@dimen/_5sdp"
-        android:orientation="horizontal"
-        android:visibility="visible"
-        android:weightSum="2">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight=".8"
-            android:background="@drawable/round_text_view"
-            android:gravity="center|left"
-            android:paddingLeft="@dimen/_10sdp"
-            android:text="Leave To"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_12sdp"></TextView>
-
-
-        <TextView
-            android:id="@+id/txtLeaveTo"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:drawablePadding="@dimen/_5sdp"
-            android:gravity="center|left"
-            android:paddingLeft="@dimen/_10sdp"
-            android:text="View"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_12sdp"></TextView>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_marginLeft="@dimen/_5sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginBottom="@dimen/_5sdp"
-        android:orientation="horizontal"
-        android:weightSum="2">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight=".8"
-            android:background="@drawable/round_text_view"
-            android:gravity="center|left"
-            android:paddingLeft="@dimen/_10sdp"
-            android:text="Leave Status"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_12sdp"></TextView>
-
-
-        <TextView
-            android:id="@+id/txtLeaveStatus"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.2"
-            android:gravity="center|left"
-            android:paddingLeft="@dimen/_10sdp"
-            android:text="14C1686"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_12sdp"></TextView>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_marginLeft="@dimen/_5sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginBottom="@dimen/_5sdp"
-        android:orientation="horizontal"
-        android:weightSum="2">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight=".8"
-            android:background="@drawable/round_text_view"
-            android:gravity="center|left"
-            android:paddingLeft="@dimen/_10sdp"
-            android:text="Reason"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_12sdp"></TextView>
-
-
-        <TextView
-            android:id="@+id/txtReason"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.2"
-            android:gravity="center|left"
-            android:paddingLeft="@dimen/_10sdp"
-            android:text="14C1686"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_12sdp"></TextView>
-
-    </LinearLayout>
-
-
-    <TextView
-        android:id="@+id/txtDetails"
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_gravity="right"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginRight="@dimen/_10sdp"
-        android:layout_marginBottom="@dimen/_5sdp"
-        android:background="@drawable/round_button_ripple"
-        android:drawableRight="@drawable/next_24"
-        android:gravity="center"
-        android:paddingRight="@dimen/_5sdp"
-        android:text="Details"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_12sdp"
-        android:visibility="gone"></TextView>
-
 
 </LinearLayout>

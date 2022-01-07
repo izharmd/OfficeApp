@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolba_reminder"></include>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:background="@color/expanse_base_color"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:background="#8164a2"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:background="#b2a2c6"
+
+            android:gravity="center"
+            android:text="Add New"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"></TextView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:background="@drawable/round_button_expense_category_button"
+            android:gravity="center"
+            android:text="View Expense"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"></TextView>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/_10sdp"
+        android:text="Here is your Monthly overview of the expenses"
+        android:textColor="@color/base_color"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"></TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@color/expanse_base_color"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:background="@drawable/round_ll_border"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Spinner
+            android:id="@+id/spMonth"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight=".9"
+            android:background="@null" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|left"
+            android:layout_weight=".1"
+            android:src="@drawable/drop_down_18"></ImageView>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:gravity="center"
+        android:paddingLeft="@dimen/_10sdp"
+        android:text="300.00£"
+        android:textColor="@color/base_color"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"></TextView>
+
+    <LinearLayout
+        android:id="@+id/ll_graph"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="Mileage 300.00£"
+            android:textColor="@color/green"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:background="@drawable/round_graph_green"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/_10sdp"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"></TextView>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/_10sdp"
+        android:text="Transportation  200.00£"
+        android:textColor="@color/red_graph"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:layout_width="@dimen/_240sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:background="@drawable/round_graph_red"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/_10sdp"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"></TextView>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/_10sdp"
+        android:text="Food &amp; Drinks   30.00£"
+        android:textColor="@color/blue_graph"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:background="@drawable/round_graph_blue"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/_10sdp"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"></TextView>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/_10sdp"
+        android:text="Leisure 15.00£"
+        android:textColor="@color/gray_graph"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:background="@drawable/round_graph_gray"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/_10sdp"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"></TextView>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/_10sdp"
+        android:text="Other 5.00£"
+        android:textColor="@color/orange_graph"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:background="@drawable/round_graph_orange"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/_10sdp"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"></TextView>
+
+</LinearLayout>

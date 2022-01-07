@@ -15,10 +15,7 @@
     </style>
 
 
-
-
-
-        <style name="textView_genral">
+    <style name="textView_genral">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/black</item>
@@ -30,7 +27,7 @@
     <style name="textView">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
-     <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:textSize">@dimen/_12sdp</item>
         <item name="android:layout_weight">.4</item>
         <item name="android:paddingLeft">@dimen/_5sdp</item>
@@ -50,7 +47,6 @@
     </style>
 
 
-
     <style name="round_editText">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
@@ -63,11 +59,10 @@
     </style>
 
 
-
     <style name="icon_view">
         <item name="android:layout_width">@dimen/_15sdp</item>
         <item name="android:layout_height">@dimen/_15sdp</item>
-       <item name="android:layout_gravity">center</item>
+        <item name="android:layout_gravity">center</item>
         <item name="android:layout_weight">.05</item>
 
     </style>
@@ -92,7 +87,6 @@
         <item name="android:textColor">@android:color/white</item>
         <item name="textAllCaps">true</item>
     </style>
-
 
 
     <style name="CustomDialogTheme">

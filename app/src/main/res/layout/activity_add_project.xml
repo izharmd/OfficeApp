@@ -174,7 +174,7 @@
             android:layout_marginRight="15dp"
             android:background="@drawable/round_cancle_button"
             android:gravity="center"
-            android:text="Cancle"
+            android:text="Cancel"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="@dimen/_14sdp"></TextView>

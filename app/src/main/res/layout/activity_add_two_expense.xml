@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolba_reminder"></include>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/expanse_base_color"
+        android:layout_marginTop="@dimen/_3sdp"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="#8164a2"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:background="@drawable/round_button_expense_category_button"
+            android:gravity="center"
+            android:text="Add New"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"></TextView>
+
+        <TextView
+            android:id="@+id/txtViewExpense"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:background="#b2a2c6"
+            android:gravity="center"
+            android:text="View Expense"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:weightSum="4">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/like"
+            android:drawablePadding="@dimen/_5sdp"
+            android:gravity="center|left"
+            android:text="Approval"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/expanse_base_color"></TextView>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/tick"
+            android:drawablePadding="@dimen/_5sdp"
+            android:gravity="center|left"
+            android:text="Save"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/expanse_base_color"></TextView>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/plus"
+            android:drawablePadding="@dimen/_5sdp"
+            android:gravity="center|left"
+            android:text="Add"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/expanse_base_color"></TextView>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/cancel"
+            android:drawablePadding="@dimen/_5sdp"
+            android:gravity="center|left"
+            android:text="Cancel"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/expanse_base_color"></TextView>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".4"
+            android:background="@color/expanse_base_color"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="Category"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"></TextView>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".6"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="Mileage"
+            android:background="@drawable/round_expanse_border"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:textSize="@dimen/_12sdp"></TextView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".4"
+            android:background="@color/expanse_base_color"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="Date"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"></TextView>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".6"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="15-01-2022"
+            android:background="@drawable/round_expanse_border"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:textSize="@dimen/_12sdp"></TextView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".4"
+            android:background="@color/expanse_base_color"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="Reason"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"></TextView>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".6"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="Project Management"
+            android:background="@drawable/round_expanse_border"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:textSize="@dimen/_12sdp"></TextView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".4"
+            android:background="@color/expanse_base_color"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="Journey"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"></TextView>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".6"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="London-Reading"
+            android:background="@drawable/round_expanse_border"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:textSize="@dimen/_12sdp"></TextView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".4"
+            android:background="@color/expanse_base_color"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="Approver"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"></TextView>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".6"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="John Smith"
+            android:background="@drawable/round_expanse_border"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:textSize="@dimen/_12sdp"></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".4"
+            android:background="@color/expanse_base_color"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="Net Amt"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"></TextView>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".6"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="1.88£"
+            android:background="@drawable/round_expanse_border"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:textSize="@dimen/_12sdp"></TextView>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:drawableLeft="@drawable/key"
+        android:drawablePadding="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center|left"
+        android:textSize="@dimen/_12sdp"
+        android:text="You can add more categories from configuration section"
+        android:textColor="@color/expanse_base_color"></TextView>
+
+
+
+</LinearLayout>

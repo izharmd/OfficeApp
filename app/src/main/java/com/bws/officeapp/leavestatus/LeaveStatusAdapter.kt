@@ -22,6 +22,7 @@ class LeaveStatusAdapter(val mList: List<LeaveStatusModel>) :
         val txtLeaveTo: TextView = itemView.findViewById(R.id.txtLeaveTo);
         val txtLeaveStatus: TextView = itemView.findViewById(R.id.txtLeaveStatus);
         val txtReason: TextView = itemView.findViewById(R.id.txtReason);
+        val txtCount: TextView = itemView.findViewById(R.id.txtCount);
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -41,6 +42,9 @@ class LeaveStatusAdapter(val mList: List<LeaveStatusModel>) :
         holder.txtLeaveTo.text = itemLeave.leaveTo
         holder.txtLeaveStatus.text = itemLeave.leaveStatus
         holder.txtReason.text = itemLeave.Reason
+
+        var pos:Int = position+1
+        holder.txtCount.text = pos.toString()
 
         val str = itemLeave.leaveStatus
         if(str.equals("Pending",true)){

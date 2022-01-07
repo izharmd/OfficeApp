@@ -17,4 +17,12 @@
     <color name="base_color_text">#7058d1</color>
     <color name="gray">#DDDDDF</color>
     <color name="gg">#088C08</color>
+    <color name="green">#326e17</color>
+    <color name="red_graph">#951711</color>
+    <color name="blue_graph">#005493</color>
+    <color name="gray_graph">#555555</color>
+    <color name="orange_graph">#ff2600</color>
+    <color name="expanse_base_color">#8164a2</color>
+
+    <color name="white_1">#F2E6E2E2</color>
 </resources>

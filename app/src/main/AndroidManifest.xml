@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OfficeApp">
+
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -54,6 +55,28 @@
             android:screenOrientation="portrait"></activity>
         <activity
             android:name=".timesheet.CalendarActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".expense.expensedetails.ExpenseDetailsActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".expense.AddExpenseTowActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".expense.AddNewExpenseActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".expense.CategoryActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".expense.ExpenseOverViewActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".expense.ViewExpansegraphActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".expense.pendingapproval.PendingApprovalActivity"
             android:screenOrientation="portrait"></activity>
     </application>
 

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolba_reminder"></include>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/expanse_base_color"
+        android:layout_marginTop="@dimen/_3sdp"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="#8164a2"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/txtPendignApproval"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:background="@drawable/round_button_expense_category_button"
+            android:gravity="center"
+            android:text="Pending Approvals"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"></TextView>
+
+        <TextView
+            android:id="@+id/txtViewExpense"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:background="#b2a2c6"
+            android:gravity="center"
+            android:text="Approved"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/round_ll_border"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Spinner
+                android:id="@+id/spMonth"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight=".9"
+                android:background="@null" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|left"
+                android:layout_weight=".1"
+                android:src="@drawable/drop_down_18"></ImageView>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="300.00£"
+            android:textColor="@color/base_color"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="Status"
+            android:textColor="@color/base_color"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"></TextView>
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/base_color"></View>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyPendignApproval"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

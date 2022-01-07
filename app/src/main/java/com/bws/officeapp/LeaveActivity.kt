@@ -11,22 +11,32 @@ import androidx.appcompat.widget.PopupMenu
 import kotlinx.android.synthetic.main.activity_leave.*
 import kotlinx.android.synthetic.main.toolba_reminder.*
 
-class LeaveActivity:AppCompatActivity(), AdapterView.OnItemSelectedListener {
+class LeaveActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
-    var list_of_items = arrayOf("Select", "Earned Leave", "Casual Leave","Sick Leave")
+    var list_of_items = arrayOf("Select", "Earned Leave", "Casual Leave", "Sick Leave")
+    var list_FromDate = arrayOf("Full Day","Half Day")
+    var list_ToDate = arrayOf("Full Day","Half Day")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_leave)
         supportActionBar?.hide()
 
         spinner!!.setOnItemSelectedListener(this)
-
-        // Create an ArrayAdapter using a simple spinner layout and languages array
         val aa = ArrayAdapter(this, android.R.layout.simple_spinner_item, list_of_items)
-        // Set layout to use when the list of choices appear
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        // Set Adapter to Spinner
         spinner!!.setAdapter(aa)
+
+
+        spFromDate!!.setOnItemSelectedListener(this)
+        val adapterFromDate =
+            ArrayAdapter(this, android.R.layout.simple_spinner_item, list_FromDate)
+        adapterFromDate.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spFromDate!!.setAdapter(adapterFromDate)
+
+        spToDate!!.setOnItemSelectedListener(this)
+        val adapterToDate = ArrayAdapter(this, android.R.layout.simple_spinner_item, list_ToDate)
+        adapterToDate.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spToDate!!.setAdapter(adapterToDate)
 
 
         imv_Shutdown.setOnClickListener {
@@ -42,9 +52,9 @@ class LeaveActivity:AppCompatActivity(), AdapterView.OnItemSelectedListener {
                             )
                         )
                     R.id.logOut ->
-                       // LogOut().closeAllActivity(applicationContext)
+                        // LogOut().closeAllActivity(applicationContext)
 
-                    Log.d("qwe","qewrt")
+                        Log.d("qwe", "qewrt")
 
                 }
                 true
