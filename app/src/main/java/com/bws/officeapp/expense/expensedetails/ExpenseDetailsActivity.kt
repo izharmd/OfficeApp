@@ -40,6 +40,7 @@ class ExpenseDetailsActivity:AppCompatActivity() , AdapterView.OnItemSelectedLis
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_expense_detsail_list)
         supportActionBar?.hide()
+        textUserName.text = resources.getText(R.string.WELCOME_TO_ESPENSA)
 
         spMonth!!.setOnItemSelectedListener(this)
         val aa = ArrayAdapter(this, R.layout.spinner_item, list_of_month)

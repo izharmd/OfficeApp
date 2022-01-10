@@ -14,6 +14,7 @@ class AddNewExpenseActivity:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_new)
         supportActionBar?.hide()
+        textUserName.text = resources.getText(R.string.WELCOME_TO_ESPENSA)
 
         txtSave.setOnClickListener(){
             startActivity(Intent(this@AddNewExpenseActivity,AddExpenseTowActivity::class.java))

@@ -13,6 +13,7 @@ class CategoryActivity:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ctegory)
         supportActionBar?.hide()
+        textUserName.text = resources.getText(R.string.WELCOME_TO_ESPENSA)
 
         ll_mileage.setOnClickListener(){
             startActivity(Intent(this@CategoryActivity,AddNewExpenseActivity::class.java))

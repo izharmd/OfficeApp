@@ -37,6 +37,7 @@ class PendingApprovalActivity:AppCompatActivity() , AdapterView.OnItemSelectedLi
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pending_approval)
         supportActionBar?.hide()
+        textUserName.text = resources.getText(R.string.WELCOME_TO_ESPENSA)
 
         spMonth!!.setOnItemSelectedListener(this)
         val aa = ArrayAdapter(this, R.layout.spinner_item, list_of_month)
@@ -46,11 +47,11 @@ class PendingApprovalActivity:AppCompatActivity() , AdapterView.OnItemSelectedLi
         recyPendignApproval.layoutManager = LinearLayoutManager(this)
         val data = ArrayList<PendingApprovalModel>()
 
-        data.add(PendingApprovalModel("M", "Fri Today", "Car Fule", "50.00£","Pending.."))
-        data.add(PendingApprovalModel("T", "Wed 22/07", "Car Fule", "50.00£","Pending.."))
-        data.add(PendingApprovalModel("M", "Fri 17/07", "Car Fule", "75.00£","Pending.."))
-        data.add(PendingApprovalModel("T", "Wed 15/07", "Car Fule", "75.00£","Pending.."))
-        data.add(PendingApprovalModel("M", "Fri 17/07", "Car Fule", "50.00£","Pending.."))
+        data.add(PendingApprovalModel("M", "Fri Today", "Car Fule", "50.00£","Pending"))
+        data.add(PendingApprovalModel("T", "Wed 22/07", "Car Fule", "50.00£","Pending"))
+        data.add(PendingApprovalModel("M", "Fri 17/07", "Car Fule", "75.00£","Pending"))
+        data.add(PendingApprovalModel("T", "Wed 15/07", "Car Fule", "75.00£","Pending"))
+        data.add(PendingApprovalModel("M", "Fri 17/07", "Car Fule", "50.00£","Pending"))
 
         val dividerDrawable =
             ContextCompat.getDrawable(this@PendingApprovalActivity, R.drawable.line_divider)

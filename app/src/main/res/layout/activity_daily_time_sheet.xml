@@ -94,6 +94,8 @@
             android:gravity="center|left"
             android:paddingLeft="@dimen/_10sdp"
             android:text="3 Jan 2022"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
             android:textColor="@color/base_color"
             android:textSize="@dimen/_12sdp"></TextView>
 
@@ -128,6 +130,8 @@
             android:gravity="center|left"
             android:paddingLeft="@dimen/_10sdp"
             android:text="10:15 AM"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
             android:textColor="@color/base_color"
             android:textSize="@dimen/_12sdp"></TextView>
 
@@ -162,6 +166,8 @@
             android:gravity="center|left"
             android:paddingLeft="@dimen/_10sdp"
             android:text="07:30 AM"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
             android:textColor="@color/base_color"
             android:textSize="@dimen/_12sdp"></TextView>
 
@@ -198,6 +204,8 @@
             android:gravity="center|left"
             android:paddingLeft="@dimen/_10sdp"
             android:text="08 Hr's 30 Min"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
             android:textColor="@color/base_color"
             android:textSize="@dimen/_12sdp"></TextView>
 
@@ -232,6 +240,8 @@
             android:gravity="center|left"
             android:paddingLeft="@dimen/_10sdp"
             android:text="01 Hr's"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
             android:textColor="@color/base_color"
             android:textSize="@dimen/_12sdp"></TextView>
 

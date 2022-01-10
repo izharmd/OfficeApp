@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:weightSum="6">
+
+    <ImageView
+        android:id="@+id/imvBack"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/_6sdp"
+        android:src="@drawable/arrow_back_ios_24"
+        android:visibility="visible"/>
+
+
+    <ImageView
+        android:id="@+id/imageCompLogo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight=".3"
+
+        android:src="@drawable/app_icon_512"></ImageView>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_weight="4.7">
+
+        <TextView
+            android:id="@+id/textUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Welcome to Office App"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="@color/base_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Thu, Dec 20, 2021 6:50 PM"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="@color/base_color"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imv_Shutdown"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_gravity="center"
+        android:layout_weight=".9"
+        android:layout_marginLeft="15dp"
+        android:paddingLeft="0dp"
+        android:src="@drawable/humberger_menu"
+        android:foreground="@drawable/rippal_cardview"
+        android:visibility="visible"/>
+
+</LinearLayout>

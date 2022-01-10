@@ -1,6 +1,8 @@
 package com.bws.officeapp.timesheet.projectlist
 
 import android.content.Context
+import android.content.Intent
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,7 +10,6 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bws.officeapp.R
-import java.util.zip.Inflater
 
 class ProjectListAdapter(val mList:ArrayList<ProjectListModel>):RecyclerView.Adapter<ProjectListAdapter.ViewHolder>() {
 
@@ -31,6 +32,15 @@ class ProjectListAdapter(val mList:ArrayList<ProjectListModel>):RecyclerView.Ada
         holder.txtSpendTime.text = modelProjectList.totalSpendTime
         holder.txtAgreedTime.text = modelProjectList.totalAggredTime
         holder.txtProStatus.text = modelProjectList.projectStatus
+
+        val pStatus = modelProjectList.projectStatus
+
+        if(pStatus.equals("Completed",true)){
+            holder.txtProStatus.setTextColor(Color.parseColor("#088C08"));
+        }else{
+            holder.txtProStatus.setTextColor(Color.parseColor("#ed1a2e"));
+        }
+
 
     }
 

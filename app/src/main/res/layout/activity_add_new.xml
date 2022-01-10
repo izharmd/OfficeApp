@@ -68,7 +68,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".2"
-            android:src="@drawable/cross_image"></ImageView>
+            android:src="@drawable/cross_image1"></ImageView>
 
     </LinearLayout>
 
@@ -102,7 +102,7 @@
             android:textSize="@dimen/_12sdp"></TextView>
 
 
-        <TextView
+        <EditText
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".6"
@@ -110,10 +110,10 @@
             android:paddingLeft="@dimen/_10sdp"
             android:text="London"
             android:background="@drawable/round_expanse_border"
-            android:textColor="@color/black"
+            android:textColor="@color/base_color"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginRight="@dimen/_10sdp"
-            android:textSize="@dimen/_12sdp"></TextView>
+            android:textSize="@dimen/_12sdp"></EditText>
 
     </LinearLayout>
 
@@ -138,7 +138,7 @@
             android:textSize="@dimen/_12sdp"></TextView>
 
 
-        <TextView
+        <EditText
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".6"
@@ -146,10 +146,10 @@
             android:paddingLeft="@dimen/_10sdp"
             android:text="Reading"
             android:background="@drawable/round_expanse_border"
-            android:textColor="@color/black"
+            android:textColor="@color/base_color"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginRight="@dimen/_10sdp"
-            android:textSize="@dimen/_12sdp"></TextView>
+            android:textSize="@dimen/_12sdp"></EditText>
 
     </LinearLayout>
 
@@ -175,7 +175,7 @@
             android:textSize="@dimen/_12sdp"></TextView>
 
 
-        <TextView
+        <EditText
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".6"
@@ -183,10 +183,10 @@
             android:paddingLeft="@dimen/_10sdp"
             android:text="5"
             android:background="@drawable/round_expanse_border"
-            android:textColor="@color/black"
+            android:textColor="@color/base_color"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginRight="@dimen/_10sdp"
-            android:textSize="@dimen/_12sdp"></TextView>
+            android:textSize="@dimen/_12sdp"></EditText>
 
     </LinearLayout>
 
@@ -211,7 +211,7 @@
             android:textSize="@dimen/_12sdp"></TextView>
 
 
-        <TextView
+        <EditText
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".6"
@@ -219,10 +219,10 @@
             android:paddingLeft="@dimen/_10sdp"
             android:text="RE34567"
             android:background="@drawable/round_expanse_border"
-            android:textColor="@color/black"
+            android:textColor="@color/base_color"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginRight="@dimen/_10sdp"
-            android:textSize="@dimen/_12sdp"></TextView>
+            android:textSize="@dimen/_12sdp"></EditText>
 
     </LinearLayout>
 
@@ -247,7 +247,7 @@
             android:textSize="@dimen/_12sdp"></TextView>
 
 
-        <TextView
+        <EditText
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".6"
@@ -255,10 +255,10 @@
             android:paddingLeft="@dimen/_10sdp"
             android:text="Car Journey"
             android:background="@drawable/round_expanse_border"
-            android:textColor="@color/black"
+            android:textColor="@color/base_color"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginRight="@dimen/_10sdp"
-            android:textSize="@dimen/_12sdp"></TextView>
+            android:textSize="@dimen/_12sdp"></EditText>
 
     </LinearLayout>
     <LinearLayout
@@ -282,7 +282,7 @@
             android:textSize="@dimen/_12sdp"></TextView>
 
 
-        <TextView
+        <EditText
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".6"
@@ -290,10 +290,10 @@
             android:paddingLeft="@dimen/_10sdp"
             android:text=""
             android:background="@drawable/round_expanse_border"
-            android:textColor="@color/black"
+            android:textColor="@color/base_color"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginRight="@dimen/_10sdp"
-            android:textSize="@dimen/_12sdp"></TextView>
+            android:textSize="@dimen/_12sdp"></EditText>
 
     </LinearLayout>
 
@@ -307,7 +307,7 @@
 
         <TextView
             android:layout_width="0dp"
-            android:layout_height="@dimen/_35sdp"
+            android:layout_height="@dimen/_40sdp"
             android:layout_weight="1"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
@@ -323,7 +323,7 @@
         <TextView
             android:id="@+id/txtSave"
             android:layout_width="0dp"
-            android:layout_height="@dimen/_35sdp"
+            android:layout_height="@dimen/_40sdp"
             android:layout_weight="1"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"

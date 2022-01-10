@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/txtAF"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_weight=".2"
+        android:background="@color/base_color"
+        android:gravity="center"
+        android:text="AF"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"></TextView>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_weight=".6"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ABC"
+            android:textStyle="bold"
+            android:textColor="@color/base_color"
+            android:textSize="@dimen/_14sdp"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/txtDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="ABC"
+                android:textColor="@color/base_color"
+                android:textSize="@dimen/_12sdp"></TextView>
+
+            <TextView
+                android:id="@+id/txtStaus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="ABC"
+                android:textColor="@color/red_graph"
+                android:textSize="@dimen/_12sdp"></TextView>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight=".2"
+        android:text="50.00£"
+        android:textColor="@color/base_color"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"></TextView>
+
+
+</LinearLayout>

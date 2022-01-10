@@ -3,20 +3,23 @@ package com.bws.officeapp.timesheet
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.PopupMenu
 import com.bws.officeapp.R
 import com.bws.officeapp.timesheet.projectlist.ProjectListActivity
 import kotlinx.android.synthetic.main.activity_search_project.*
+import kotlinx.android.synthetic.main.toolba_reminder.*
 import java.util.*
 import javax.xml.datatype.DatatypeConstants.MONTHS
 
 class SearchProjectActivity :AppCompatActivity(), AdapterView.OnItemSelectedListener{
 
-    var list_of_items = arrayOf("-Select-","Project", "Project Status", "Date Range")
+    var list_of_items = arrayOf("-Select-","By Project name", "By Project Status", "By Date Range")
 
     val c = Calendar.getInstance()
     val year = c.get(Calendar.YEAR)
@@ -28,6 +31,8 @@ class SearchProjectActivity :AppCompatActivity(), AdapterView.OnItemSelectedList
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search_project)
         supportActionBar?.hide()
+
+        textUserName.text = resources.getText(R.string.WELCOME_TO_TIME_SHEET_APP)
 
         val aa = ArrayAdapter(this, android.R.layout.simple_spinner_item, list_of_items)
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
@@ -45,6 +50,33 @@ class SearchProjectActivity :AppCompatActivity(), AdapterView.OnItemSelectedList
 
         txtSearch.setOnClickListener(){
            startActivity(Intent(this@SearchProjectActivity, ProjectListActivity::class.java))
+        }
+
+        imv_Shutdown.setOnClickListener {
+            val popupMenu: PopupMenu = PopupMenu(this, imv_Shutdown)
+            popupMenu.menuInflater.inflate(R.menu.menu, popupMenu.menu)
+            popupMenu.setOnMenuItemClickListener(PopupMenu.OnMenuItemClickListener { item ->
+                when (item.itemId) {
+                    R.id.setting ->
+                        startActivity(
+                            Intent(
+                                applicationContext,
+                                ProfileTimeSheetActivity::class.java
+                            )
+                        )
+                    R.id.logOut ->
+                        // LogOut().closeAllActivity(applicationContext)
+
+                        Log.d("qwe","qewrt");
+
+                }
+                true
+            })
+            popupMenu.show()
+        }
+
+        imvBack.setOnClickListener(){
+            finish()
         }
     }
 

@@ -1,10 +1,14 @@
 package com.bws.officeapp.timesheet
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.PopupMenu
 import com.bws.officeapp.R
 import com.events.calendar.views.EventsCalendar
 import kotlinx.android.synthetic.main.activity_calendar.*
+import kotlinx.android.synthetic.main.toolba_reminder.*
 import java.util.*
 
 class CalendarActivity:AppCompatActivity(), EventsCalendar.Callback {
@@ -13,10 +17,7 @@ class CalendarActivity:AppCompatActivity(), EventsCalendar.Callback {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calendar)
         supportActionBar?.hide()
-
-
-       // selected.text = getDateString(eventsCalendar.getCurrentSelectedDate()?.timeInMillis)
-
+        textUserName.text = resources.getText(R.string.WELCOME_TO_TIME_SHEET_APP)
         val today = Calendar.getInstance()
         val end = Calendar.getInstance()
         end.add(Calendar.YEAR, 2)
@@ -53,6 +54,35 @@ class CalendarActivity:AppCompatActivity(), EventsCalendar.Callback {
 
         val dc = Calendar.getInstance()
         dc.add(Calendar.DAY_OF_MONTH, 2)
+
+
+        imv_Shutdown.setOnClickListener {
+            val popupMenu: PopupMenu = PopupMenu(this, imv_Shutdown)
+            popupMenu.menuInflater.inflate(R.menu.menu, popupMenu.menu)
+            popupMenu.setOnMenuItemClickListener(PopupMenu.OnMenuItemClickListener { item ->
+                when (item.itemId) {
+                    R.id.setting ->
+                        startActivity(
+                            Intent(
+                                applicationContext,
+                                ProfileTimeSheetActivity::class.java
+                            )
+                        )
+                    R.id.logOut ->
+                        // LogOut().closeAllActivity(applicationContext)
+
+                        Log.d("qwe","qewrt");
+
+                }
+                true
+            })
+            popupMenu.show()
+        }
+
+        imvBack.setOnClickListener(){
+            finish()
+        }
+
     }
 
     override fun onDayLongPressed(selectedDate: Calendar?) {

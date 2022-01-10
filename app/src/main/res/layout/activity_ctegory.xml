@@ -29,7 +29,7 @@
             android:gravity="center"
             android:text="Add New"
             android:textColor="@color/white"
-            android:textSize="@dimen/_12sdp"></TextView>
+            android:textSize="@dimen/_14sdp"></TextView>
 
         <TextView
             android:id="@+id/txtViewExpense"
@@ -41,7 +41,7 @@
             android:gravity="center"
             android:text="View Expense"
             android:textColor="@color/white"
-            android:textSize="@dimen/_12sdp"></TextView>
+            android:textSize="@dimen/_14sdp"></TextView>
     </LinearLayout>
 
     <TextView
@@ -50,6 +50,7 @@
         android:layout_marginLeft="@dimen/_10sdp"
         android:gravity="left|center"
         android:text="Category"
+        android:layout_marginTop="@dimen/_5sdp"
         android:textColor="@color/base_color"
         android:textSize="@dimen/_16sdp"
         android:textStyle="bold"></TextView>
@@ -57,12 +58,13 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:background="@color/gray"></View>
 
     <LinearLayout
         android:id="@+id/ll_mileage"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_40sdp"
+        android:layout_height="@dimen/_50sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:weightSum="1">
 
@@ -71,7 +73,7 @@
             android:layout_height="@dimen/_30sdp"
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_weight=".18"
+            android:layout_weight=".15"
             android:background="@drawable/round_milage"
             android:gravity="center"></TextView>
 
@@ -80,23 +82,26 @@
             android:layout_height="@dimen/_30sdp"
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_weight=".65"
+            android:layout_weight=".7"
             android:gravity="center|left"
             android:text="Mileage"
+            android:textStyle="bold"
             android:textColor="@color/base_color"
-            android:textSize="@dimen/_12sdp"></TextView>
+            android:textSize="@dimen/_14sdp"></TextView>
 
         <RadioButton
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight=".1"
+            android:layout_weight=".15"
+            android:backgroundTint="@color/base_color"
+            android:buttonTint="@color/base_color"
             android:gravity="center"></RadioButton>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_40sdp"
+        android:layout_height="@dimen/_50sdp"
         android:weightSum="1">
 
         <TextView
@@ -104,7 +109,7 @@
             android:layout_height="@dimen/_30sdp"
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_weight=".18"
+            android:layout_weight=".15"
             android:background="@drawable/round_transportation"
             android:gravity="center"></TextView>
 
@@ -113,23 +118,26 @@
             android:layout_height="@dimen/_30sdp"
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_weight=".65"
+            android:layout_weight=".7"
             android:gravity="center|left"
             android:text="Transportation"
+            android:textStyle="bold"
             android:textColor="@color/base_color"
-            android:textSize="@dimen/_12sdp"></TextView>
+            android:textSize="@dimen/_14sdp"></TextView>
 
         <RadioButton
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight=".1"
+            android:layout_weight=".15"
+            android:backgroundTint="@color/base_color"
+            android:buttonTint="@color/base_color"
             android:gravity="center"></RadioButton>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_40sdp"
+        android:layout_height="@dimen/_50sdp"
         android:weightSum="1">
 
         <TextView
@@ -137,7 +145,7 @@
             android:layout_height="@dimen/_30sdp"
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_weight=".18"
+            android:layout_weight=".15"
             android:background="@drawable/round_food_and_drink"
             android:gravity="center"></TextView>
 
@@ -146,23 +154,26 @@
             android:layout_height="@dimen/_30sdp"
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_weight=".65"
+            android:layout_weight=".7"
             android:gravity="center|left"
+            android:textStyle="bold"
             android:text="Food &amp; Drinks"
             android:textColor="@color/base_color"
-            android:textSize="@dimen/_12sdp"></TextView>
+            android:textSize="@dimen/_14sdp"></TextView>
 
         <RadioButton
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight=".1"
+            android:layout_weight=".15"
+            android:backgroundTint="@color/base_color"
+            android:buttonTint="@color/base_color"
             android:gravity="center"></RadioButton>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_40sdp"
+        android:layout_height="@dimen/_50sdp"
         android:weightSum="1">
 
         <TextView
@@ -170,7 +181,7 @@
             android:layout_height="@dimen/_30sdp"
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_weight=".18"
+            android:layout_weight=".15"
             android:background="@drawable/round_lesiure"
             android:gravity="center"></TextView>
 
@@ -179,23 +190,26 @@
             android:layout_height="@dimen/_30sdp"
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_weight=".65"
+            android:layout_weight=".7"
             android:gravity="center|left"
             android:text="Lesiure"
+            android:textStyle="bold"
             android:textColor="@color/base_color"
-            android:textSize="@dimen/_12sdp"></TextView>
+            android:textSize="@dimen/_14sdp"></TextView>
 
         <RadioButton
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight=".1"
+            android:layout_weight=".15"
+            android:backgroundTint="@color/base_color"
+            android:buttonTint="@color/base_color"
             android:gravity="center"></RadioButton>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_40sdp"
+        android:layout_height="@dimen/_50sdp"
         android:weightSum="1">
 
         <TextView
@@ -203,7 +217,7 @@
             android:layout_height="@dimen/_30sdp"
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_weight=".18"
+            android:layout_weight=".15"
             android:background="@drawable/round_others"
             android:gravity="center"></TextView>
 
@@ -212,16 +226,19 @@
             android:layout_height="@dimen/_30sdp"
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_weight=".65"
+            android:layout_weight=".7"
             android:gravity="center|left"
             android:text="Others"
+            android:textStyle="bold"
             android:textColor="@color/base_color"
-            android:textSize="@dimen/_12sdp"></TextView>
+            android:textSize="@dimen/_14sdp"></TextView>
 
         <RadioButton
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight=".1"
+            android:layout_weight=".15"
+            android:backgroundTint="@color/base_color"
+            android:buttonTint="@color/base_color"
             android:gravity="center"></RadioButton>
 
     </LinearLayout>

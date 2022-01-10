@@ -9,7 +9,12 @@ import androidx.appcompat.widget.PopupMenu
 import com.bws.officeapp.LoginActivity
 import com.bws.officeapp.R
 import com.bws.officeapp.expense.AddNewExpenseActivity
+import com.bws.officeapp.expense.ViewExpansegraphActivity
+import com.bws.officeapp.expense.claim.AddNewClaimActivity
+import com.bws.officeapp.expense.expensedetails.ExpenseDetailsActivity
 import com.bws.officeapp.expense.pendingapproval.PendingApprovalActivity
+import com.bws.officeapp.expense.receipts.AddMyReceiptsActivity
+import com.bws.officeapp.expense.trip.AddNewTripActivity
 import kotlinx.android.synthetic.main.toolba_reminder.*
 
 class MyPopUpMenu {
@@ -24,16 +29,19 @@ class MyPopUpMenu {
                     R.id.ddExpense ->
                         context.startActivity(Intent(context, AddNewExpenseActivity::class.java))
                     R.id.expenseDetails ->
-                        Log.d("qwe", "qewrt")
+                        context.startActivity(Intent(context, ViewExpansegraphActivity::class.java))
 
                     R.id.pendingApproval ->
                         context.startActivity(Intent(context, PendingApprovalActivity::class.java))
 
                     R.id.addClaim ->
-                        Log.d("qwe", "qewrt")
+                        context.startActivity(Intent(context, AddNewClaimActivity::class.java))
+
+                    R.id.addTrip ->
+                        context.startActivity(Intent(context, AddNewTripActivity::class.java))
 
                     R.id.addReceipt ->
-                        Log.d("qwe", "qewrt")
+                        context.startActivity(Intent(context, AddMyReceiptsActivity::class.java))
 
                 }
                 true

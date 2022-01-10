@@ -16,12 +16,8 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         supportActionBar?.hide()
 
-       /* btnLogin.setOnClickListener {
-            startActivity(Intent(this@LoginActivity, MainActivity::class.java))
-        }*/
-
         btnLogin.setOnClickListener {
-            startActivity(Intent(this@LoginActivity, ExpenseOverViewActivity::class.java))
+            startActivity(Intent(this@LoginActivity, DashboardOfficeAppActivity::class.java))
         }
     }
 }

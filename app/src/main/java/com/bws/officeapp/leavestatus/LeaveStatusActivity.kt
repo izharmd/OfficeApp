@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bws.officeapp.R
 import com.dgreenhalgh.android.simpleitemdecoration.linear.DividerItemDecoration
 import kotlinx.android.synthetic.main.activity_leave_status.*
+import kotlinx.android.synthetic.main.toolba_reminder.*
 import java.util.ArrayList
 
 class LeaveStatusActivity:AppCompatActivity() {
@@ -14,6 +15,7 @@ class LeaveStatusActivity:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_leave_status)
         supportActionBar?.hide()
+        textUserName.text = resources.getText(R.string.WELCOME_TO_LEAVE_APP)
 
         recyLeaveStatus.layoutManager = LinearLayoutManager(this)
 

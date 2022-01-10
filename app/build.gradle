@@ -15,7 +15,7 @@ android {
         targetSdkVersion 31
         versionCode 1
         versionName "1.0"
-
+        multiDexEnabled true  //ADD THIS LINE
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -51,4 +51,6 @@ dependencies {
     implementation 'com.github.tizisdeepan:eventscalendar:1.6.1'//https://github.com/tizisdeepan/EventsCalendar
 
     compile 'com.github.felixsoares:HorizontalBarGraph:1.1'
+    implementation 'com.github.AnyChart:AnyChart-Android:1.1.2'
+    implementation 'androidx.multidex:multidex:2.0.1'
 }

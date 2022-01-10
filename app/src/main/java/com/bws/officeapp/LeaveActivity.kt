@@ -20,6 +20,7 @@ class LeaveActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_leave)
         supportActionBar?.hide()
+        textUserName.text = resources.getText(R.string.WELCOME_TO_LEAVE_APP)
 
         spinner!!.setOnItemSelectedListener(this)
         val aa = ArrayAdapter(this, android.R.layout.simple_spinner_item, list_of_items)

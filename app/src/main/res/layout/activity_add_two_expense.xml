@@ -9,7 +9,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/_1sdp"
-        android:background="@color/expanse_base_color"
+        android:background="@color/base_color"
         android:layout_marginTop="@dimen/_3sdp"></View>
 
     <LinearLayout
@@ -61,10 +61,11 @@
             android:gravity="center|left"
             android:text="Approval"
             android:textSize="@dimen/_12sdp"
-            android:textColor="@color/expanse_base_color"></TextView>
+            android:textColor="@color/base_color"></TextView>
 
 
         <TextView
+            android:id="@+id/txtSaveExpense"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_5sdp"
@@ -74,7 +75,7 @@
             android:gravity="center|left"
             android:text="Save"
             android:textSize="@dimen/_12sdp"
-            android:textColor="@color/expanse_base_color"></TextView>
+            android:textColor="@color/base_color"></TextView>
 
 
         <TextView
@@ -87,7 +88,7 @@
             android:gravity="center|left"
             android:text="Add"
             android:textSize="@dimen/_12sdp"
-            android:textColor="@color/expanse_base_color"></TextView>
+            android:textColor="@color/base_color"></TextView>
 
 
         <TextView
@@ -100,7 +101,7 @@
             android:gravity="center|left"
             android:text="Cancel"
             android:textSize="@dimen/_12sdp"
-            android:textColor="@color/expanse_base_color"></TextView>
+            android:textColor="@color/base_color"></TextView>
 
 
     </LinearLayout>
@@ -119,7 +120,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".4"
-            android:background="@color/expanse_base_color"
+            android:background="@color/base_color"
             android:gravity="center|left"
             android:paddingLeft="@dimen/_10sdp"
             android:text="Category"
@@ -127,7 +128,7 @@
             android:textSize="@dimen/_12sdp"></TextView>
 
 
-        <TextView
+        <EditText
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".6"
@@ -135,10 +136,10 @@
             android:paddingLeft="@dimen/_10sdp"
             android:text="Mileage"
             android:background="@drawable/round_expanse_border"
-            android:textColor="@color/black"
+            android:textColor="@color/base_color"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginRight="@dimen/_10sdp"
-            android:textSize="@dimen/_12sdp"></TextView>
+            android:textSize="@dimen/_12sdp"></EditText>
 
     </LinearLayout>
 
@@ -156,7 +157,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".4"
-            android:background="@color/expanse_base_color"
+            android:background="@color/base_color"
             android:gravity="center|left"
             android:paddingLeft="@dimen/_10sdp"
             android:text="Date"
@@ -172,7 +173,7 @@
             android:paddingLeft="@dimen/_10sdp"
             android:text="15-01-2022"
             android:background="@drawable/round_expanse_border"
-            android:textColor="@color/black"
+            android:textColor="@color/base_color"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginRight="@dimen/_10sdp"
             android:textSize="@dimen/_12sdp"></TextView>
@@ -193,7 +194,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".4"
-            android:background="@color/expanse_base_color"
+            android:background="@color/base_color"
             android:gravity="center|left"
             android:paddingLeft="@dimen/_10sdp"
             android:text="Reason"
@@ -201,7 +202,7 @@
             android:textSize="@dimen/_12sdp"></TextView>
 
 
-        <TextView
+        <EditText
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".6"
@@ -209,10 +210,10 @@
             android:paddingLeft="@dimen/_10sdp"
             android:text="Project Management"
             android:background="@drawable/round_expanse_border"
-            android:textColor="@color/black"
+            android:textColor="@color/base_color"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginRight="@dimen/_10sdp"
-            android:textSize="@dimen/_12sdp"></TextView>
+            android:textSize="@dimen/_12sdp"></EditText>
 
     </LinearLayout>
 
@@ -230,7 +231,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".4"
-            android:background="@color/expanse_base_color"
+            android:background="@color/base_color"
             android:gravity="center|left"
             android:paddingLeft="@dimen/_10sdp"
             android:text="Journey"
@@ -238,7 +239,7 @@
             android:textSize="@dimen/_12sdp"></TextView>
 
 
-        <TextView
+        <EditText
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".6"
@@ -246,10 +247,10 @@
             android:paddingLeft="@dimen/_10sdp"
             android:text="London-Reading"
             android:background="@drawable/round_expanse_border"
-            android:textColor="@color/black"
+            android:textColor="@color/base_color"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginRight="@dimen/_10sdp"
-            android:textSize="@dimen/_12sdp"></TextView>
+            android:textSize="@dimen/_12sdp"></EditText>
 
     </LinearLayout>
 
@@ -267,7 +268,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".4"
-            android:background="@color/expanse_base_color"
+            android:background="@color/base_color"
             android:gravity="center|left"
             android:paddingLeft="@dimen/_10sdp"
             android:text="Approver"
@@ -275,7 +276,7 @@
             android:textSize="@dimen/_12sdp"></TextView>
 
 
-        <TextView
+        <EditText
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".6"
@@ -283,10 +284,10 @@
             android:paddingLeft="@dimen/_10sdp"
             android:text="John Smith"
             android:background="@drawable/round_expanse_border"
-            android:textColor="@color/black"
+            android:textColor="@color/base_color"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginRight="@dimen/_10sdp"
-            android:textSize="@dimen/_12sdp"></TextView>
+            android:textSize="@dimen/_12sdp"></EditText>
 
     </LinearLayout>
 
@@ -303,7 +304,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".4"
-            android:background="@color/expanse_base_color"
+            android:background="@color/base_color"
             android:gravity="center|left"
             android:paddingLeft="@dimen/_10sdp"
             android:text="Net Amt"
@@ -311,18 +312,19 @@
             android:textSize="@dimen/_12sdp"></TextView>
 
 
-        <TextView
+        <EditText
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".6"
             android:gravity="center|left"
             android:paddingLeft="@dimen/_10sdp"
             android:text="1.88£"
+            android:inputType="number"
             android:background="@drawable/round_expanse_border"
-            android:textColor="@color/black"
+            android:textColor="@color/base_color"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginRight="@dimen/_10sdp"
-            android:textSize="@dimen/_12sdp"></TextView>
+            android:textSize="@dimen/_12sdp"></EditText>
 
     </LinearLayout>
 
@@ -334,9 +336,9 @@
         android:drawablePadding="@dimen/_5sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:gravity="center|left"
-        android:textSize="@dimen/_12sdp"
+        android:textSize="@dimen/_14sdp"
         android:text="You can add more categories from configuration section"
-        android:textColor="@color/expanse_base_color"></TextView>
+        android:textColor="@color/base_color"></TextView>
 
 
 

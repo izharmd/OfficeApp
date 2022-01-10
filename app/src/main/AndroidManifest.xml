@@ -31,7 +31,7 @@
             android:name=".ProfileActivity"
             android:screenOrientation="portrait"></activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".DashBoardLeaveAppActivity"
             android:screenOrientation="portrait"></activity>
 
         <activity
@@ -62,9 +62,11 @@
             android:screenOrientation="portrait"></activity>
         <activity
             android:name=".expense.AddExpenseTowActivity"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait"></activity>
         <activity
             android:name=".expense.AddNewExpenseActivity"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait"></activity>
         <activity
             android:name=".expense.CategoryActivity"
@@ -76,8 +78,37 @@
             android:name=".expense.ViewExpansegraphActivity"
             android:screenOrientation="portrait"></activity>
 
-        <activity android:name=".expense.pendingapproval.PendingApprovalActivity"
+        <activity
+            android:name=".expense.pendingapproval.PendingApprovalActivity"
             android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".expense.claim.AddNewClaimActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".expense.trip.AddNewTripActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".expense.receipts.AddMyReceiptsActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".expense.selectitem.SelectItemActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".timesheet.MekkoChartActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".timesheet.ProfileTimeSheetActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".timesheet.ChartActivity"></activity>
+        <activity
+            android:name="com.bws.timesheet.projectstatus.ProjectStatusActvity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".DashboardOfficeAppActivity"
+            android:screenOrientation="portrait"></activity>
+
+
     </application>
 
 </manifest>

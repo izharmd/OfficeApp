@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">OfficeApp</string>
+    <string name="WELCOME_TO_OFFICE_APP">Welcome To Office App</string>
+    <string name="WELCOME_TO_LEAVE_APP">Welcome To Leave App</string>
+    <string name="WELCOME_TO_TIME_SHEET_APP">Welcome To Time Sheet App</string>
+    <string name="WELCOME_TO_ESPENSA">Welcome To Spensa</string>
 </resources>

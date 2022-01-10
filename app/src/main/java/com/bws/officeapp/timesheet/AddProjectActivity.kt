@@ -6,14 +6,12 @@ import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.PopupMenu
-import com.bws.officeapp.ProfileActivity
 import com.bws.officeapp.R
 import kotlinx.android.synthetic.main.activity_add_project.*
-import kotlinx.android.synthetic.main.activity_daily_time_sheet.*
-import kotlinx.android.synthetic.main.activity_leave.*
-import kotlinx.android.synthetic.main.activity_leave.spinner
+
 import kotlinx.android.synthetic.main.toolba_reminder.*
 
 class AddProjectActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
@@ -23,13 +21,25 @@ class AddProjectActivity : AppCompatActivity(), AdapterView.OnItemSelectedListen
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_project)
         supportActionBar?.hide()
+        textUserName.text = resources.getText(R.string.WELCOME_TO_TIME_SHEET_APP)
 
         spinner1!!.setOnItemSelectedListener(this)
 
         val aa = ArrayAdapter(this, android.R.layout.simple_spinner_item, list_of_project)
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner1!!.setAdapter(aa)
+        spinner1.setSelection(1)
 
+        var projectName = intent.getStringExtra("message_key").toString()
+        var alocatedxBy = intent.getStringExtra("alocatedBy").toString()
+        val date = intent.getStringExtra("date")
+        val agreedDate = intent.getStringExtra("aggreedDate")
+        val time = intent.getStringExtra("time")
+
+        txtAlocatedBy.setText(alocatedxBy)
+        txtDate.setText(date)
+        edtAggredDate.setText(agreedDate)
+        edtAggredTime.setText(time)
 
         imv_Shutdown.setOnClickListener {
             val popupMenu: PopupMenu = PopupMenu(this, imv_Shutdown)
@@ -40,7 +50,7 @@ class AddProjectActivity : AppCompatActivity(), AdapterView.OnItemSelectedListen
                         startActivity(
                             Intent(
                                 applicationContext,
-                                ProfileActivity::class.java
+                                ProfileTimeSheetActivity::class.java
                             )
                         )
                     R.id.logOut ->
@@ -52,6 +62,10 @@ class AddProjectActivity : AppCompatActivity(), AdapterView.OnItemSelectedListen
                 true
             })
             popupMenu.show()
+        }
+
+        imvBack.setOnClickListener(){
+            finish()
         }
     }
 
