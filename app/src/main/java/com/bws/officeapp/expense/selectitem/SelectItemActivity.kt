@@ -2,9 +2,12 @@ package com.bws.officeapp.expense.selectitem
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bws.officeapp.R
 import com.bws.officeapp.expense.utils.MyPopUpMenu
+import com.dgreenhalgh.android.simpleitemdecoration.linear.DividerItemDecoration
+import kotlinx.android.synthetic.main.activity_expense_detsail_list.*
 import kotlinx.android.synthetic.main.activity_select_item.*
 import kotlinx.android.synthetic.main.toolba_reminder.*
 
@@ -26,6 +29,11 @@ class SelectItemActivity:AppCompatActivity() {
         data.add(SelectItemModel(R.drawable.img7,"Approver",R.drawable.img2))
         data.add(SelectItemModel(R.drawable.img8,"Project Code",R.drawable.img3))
         data.add(SelectItemModel(R.drawable.img9,"VAT Code",R.drawable.img3))
+
+
+        val dividerDrawable =
+            ContextCompat.getDrawable(this@SelectItemActivity, R.drawable.line_divider)
+        recySelectItem.addItemDecoration(DividerItemDecoration(dividerDrawable))
 
         val adapter = SelectItemAdapter(data)
         recySelectItem.adapter = adapter

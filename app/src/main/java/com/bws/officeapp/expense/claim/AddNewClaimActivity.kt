@@ -56,7 +56,7 @@ class AddNewClaimActivity:AppCompatActivity(), AdapterView.OnItemSelectedListene
 
         val dividerDrawable =
             ContextCompat.getDrawable(this@AddNewClaimActivity, R.drawable.line_divider)
-        recyExpDetails.addItemDecoration(DividerItemDecoration(dividerDrawable))
+        recyMyClaim.addItemDecoration(DividerItemDecoration(dividerDrawable))
 
 
         val adapter = MyClaimAdapter(data)

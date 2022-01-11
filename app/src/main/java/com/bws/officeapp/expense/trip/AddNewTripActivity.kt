@@ -56,7 +56,7 @@ class AddNewTripActivity:AppCompatActivity() , AdapterView.OnItemSelectedListene
 
         val dividerDrawable =
             ContextCompat.getDrawable(this@AddNewTripActivity, R.drawable.line_divider)
-        recyExpDetails.addItemDecoration(DividerItemDecoration(dividerDrawable))
+        recyRecentTrip.addItemDecoration(DividerItemDecoration(dividerDrawable))
 
         val adapter = RecentTripAdapter(data)
         recyRecentTrip.adapter = adapter
