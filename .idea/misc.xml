@@ -3,7 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_login.xml" value="0.11041666666666666" />
+        <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/drawable-v21/rippal_cardview.xml" value="0.1" />
+        <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/drawable/email_24.xml" value="0.1" />
+        <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/drawable/first_name_24.xml" value="0.1" />
+        <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/drawable/phone_24.xml" value="0.1" />
+        <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/drawable/rippal_cardview.xml" value="0.1" />
+        <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/drawable/title_24.xml" value="0.1" />
+        <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_login.xml" value="0.15" />
+        <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_registration.xml" value="0.15" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_spalsh.xml" value="0.11041666666666666" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/progress_dialog.xml" value="0.1" />
       </map>

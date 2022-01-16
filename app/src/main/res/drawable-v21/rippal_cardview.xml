@@ -9,5 +9,5 @@
                 android:radius="@dimen/_5sdp"/>
         </shape>
     </item>
-    <item android:drawable="@drawable/round_card_view" />
+    <item android:drawable="@drawable/round_button_login" />
 </ripple>
