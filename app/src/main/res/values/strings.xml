@@ -4,4 +4,8 @@
     <string name="WELCOME_TO_LEAVE_APP">Welcome To Leave App</string>
     <string name="WELCOME_TO_TIME_SHEET_APP">Welcome To Time Sheet App</string>
     <string name="WELCOME_TO_ESPENSA">Welcome To Spensa</string>
+    <string name="WELCOME_TO_POLICY_DOC">Welcome To Policy Document</string>
+
+    <string name="LOADING_PLEASE_WAIT">Loading Please wait..</string>
+    <string name="NO_INTERNET_CONNECTION">No internet connection</string>
 </resources>

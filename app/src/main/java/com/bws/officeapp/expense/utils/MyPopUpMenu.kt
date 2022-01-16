@@ -1,21 +1,16 @@
 package com.bws.officeapp.expense.utils
 
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
-import android.util.Log
 import android.widget.ImageView
 import androidx.appcompat.widget.PopupMenu
-import com.bws.officeapp.LoginActivity
 import com.bws.officeapp.R
 import com.bws.officeapp.expense.AddNewExpenseActivity
 import com.bws.officeapp.expense.ViewExpansegraphActivity
 import com.bws.officeapp.expense.claim.AddNewClaimActivity
-import com.bws.officeapp.expense.expensedetails.ExpenseDetailsActivity
 import com.bws.officeapp.expense.pendingapproval.PendingApprovalActivity
 import com.bws.officeapp.expense.receipts.AddMyReceiptsActivity
 import com.bws.officeapp.expense.trip.AddNewTripActivity
-import kotlinx.android.synthetic.main.toolba_reminder.*
 
 class MyPopUpMenu {
 
