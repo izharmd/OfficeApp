@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.PopupMenu
 import com.bws.officeapp.R
+import com.bws.officeapp.timesheet.dailitimesheet.DailyTimeSheetActivity
 import com.bws.timesheet.projectstatus.ProjectStatusActvity
 import kotlinx.android.synthetic.main.activity_timesheet.*
 import kotlinx.android.synthetic.main.toolba_reminder.*
@@ -19,7 +20,7 @@ class TimeSheetDashboardActivity:AppCompatActivity() {
         textUserName.text = resources.getText(R.string.WELCOME_TO_TIME_SHEET_APP)
 
         cardViewDailyTimeSheet.setOnClickListener(){
-            startActivity(Intent(this@TimeSheetDashboardActivity,DailyTimeSheetActivity::class.java))
+            startActivity(Intent(this@TimeSheetDashboardActivity, DailyTimeSheetActivity::class.java))
         }
 
         carViewManageProject.setOnClickListener(){

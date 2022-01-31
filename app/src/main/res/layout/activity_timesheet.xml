@@ -29,9 +29,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:foreground="@drawable/rippal_cardview"
             card_view:cardCornerRadius="10dp"
             card_view:cardElevation="5dp"
+            android:foreground="@drawable/ripple_effect"
             card_view:cardUseCompatPadding="true">
 
             <LinearLayout
@@ -45,7 +45,7 @@
                     android:layout_width="@dimen/_100sdp"
                     android:layout_height="@dimen/_100sdp"
                     android:layout_gravity="center"
-                    android:src="@drawable/daily_time_sheet"></ImageView>
+                    android:src="@drawable/daily_timesheet"></ImageView>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -68,8 +68,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:clickable="true"
-            android:foreground="@drawable/rippal_cardview"
+            android:foreground="@drawable/ripple_effect"
             card_view:cardCornerRadius="10dp"
             card_view:cardElevation="5dp"
             card_view:cardUseCompatPadding="true">
@@ -117,9 +116,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:foreground="@drawable/rippal_cardview"
             card_view:cardCornerRadius="10dp"
             card_view:cardElevation="5dp"
+            android:foreground="@drawable/ripple_effect"
             card_view:cardUseCompatPadding="true">
 
             <LinearLayout
@@ -153,8 +152,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:clickable="true"
-            android:foreground="@drawable/rippal_cardview"
+            android:foreground="@drawable/ripple_effect"
             android:visibility="visible"
             card_view:cardCornerRadius="10dp"
             card_view:cardElevation="5dp"

@@ -67,7 +67,7 @@
         android:layout_marginLeft="15dp"
         android:paddingLeft="0dp"
         android:src="@drawable/humberger_menu"
-        android:foreground="@drawable/rippal_cardview"
+        android:foreground="@drawable/ripple_effect"
         android:visibility="visible"/>
 
 </LinearLayout>

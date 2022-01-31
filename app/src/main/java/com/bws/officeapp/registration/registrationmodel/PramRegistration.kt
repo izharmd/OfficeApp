@@ -1,6 +1,7 @@
 package com.bws.officeapp.registration.registrationmodel
 
 data class PramRegistration(
+    val RoleID:String,
     val Title: String,
     val FirstName: String,
     val LastName:String,

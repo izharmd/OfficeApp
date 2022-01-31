@@ -8,8 +8,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bws.officeapp.R
+import com.bws.officeapp.leavestatus.leavestatusviewmodel.LeaveStatusResponse
+import com.bws.officeapp.utils.Response
 
-class LeaveStatusAdapter(val mList: List<LeaveStatusModel>) :
+class LeaveStatusAdapter(val mList: Response<LeaveStatusResponse>) :
     RecyclerView.Adapter<LeaveStatusAdapter.ViewHolder>() {
 
     private var context: Context? = null
@@ -34,20 +36,20 @@ class LeaveStatusAdapter(val mList: List<LeaveStatusModel>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        val itemLeave = mList[position]
-        holder.txtEmpId.text = itemLeave.empid
-        holder.txtEmpName.text = itemLeave.empName
-        holder.txtDayOfLeave.text = itemLeave.dayOfleave
-        holder.txtLeaveFrom.text = itemLeave.leaveFrom
-        holder.txtLeaveTo.text = itemLeave.leaveTo
-        holder.txtLeaveStatus.text = itemLeave.leaveStatus
-        holder.txtReason.text = itemLeave.Reason
+        val itemLeave = mList.data?.data?.Leaves?.get(position)
+        holder.txtEmpId.text = itemLeave?.UserID.toString()
+        holder.txtEmpName.text = itemLeave?.FirstName + " " + itemLeave?.LastName
+        holder.txtDayOfLeave.text = itemLeave?.DaysOfLeave.toString()
+        holder.txtLeaveFrom.text = itemLeave?.LeaveFrom
+        holder.txtLeaveTo.text = itemLeave?.LeaveTo
+        holder.txtLeaveStatus.text = itemLeave?.ApprovalStatus
+        holder.txtReason.text = itemLeave?.Reason
 
         var pos:Int = position+1
         holder.txtCount.text = pos.toString()
 
-        val str = itemLeave.leaveStatus
-        if(str.equals("Pending",true)){
+        val str = itemLeave?.ApprovalStatus
+        if(str?.equals("Pending") == true){
             holder.txtLeaveStatus.setTextColor(Color.parseColor("#ed1a2e"));
         }else{
             holder.txtLeaveStatus.setTextColor(Color.parseColor("#088C08"));
@@ -56,6 +58,6 @@ class LeaveStatusAdapter(val mList: List<LeaveStatusModel>) :
     }
 
     override fun getItemCount(): Int {
-        return mList.size
+        return mList.data?.data?.Leaves?.size!!
     }
 }

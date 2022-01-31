@@ -15,7 +15,7 @@ class RegistrationViewModel(
     val registrationRepository: RegistrationRepository,
     val context: Context
 ) : ViewModel() {
-     val registrationLiveData = MutableLiveData<Response<ResgistrationResponse>>()
+    val registrationLiveData = MutableLiveData<Response<ResgistrationResponse>>()
 
     init {
         getUserRegistration()
@@ -24,15 +24,22 @@ class RegistrationViewModel(
     private fun getUserRegistration() {
         viewModelScope.launch {
             if (NetworkUtils.isNetworkAvailable(context)) {
-
-                registrationLiveData.postValue(Response.Loading(loadingMessage = context.resources.getString(R.string.LOADING_PLEASE_WAIT)))
+                registrationLiveData.postValue(
+                    Response.Loading(
+                        loadingMessage = context.resources.getString(
+                            R.string.LOADING_PLEASE_WAIT
+                        )
+                    )
+                )
                 try {
-                    val response = registrationRepository.getUserRegistration().body()
-                    val message = response?.Message.toString()
-                    if (message.equals("Insert Successful", true)) {
-                        registrationLiveData.postValue(Response.Success(response))
+                    val response = registrationRepository.getUserRegistration()
+
+                    val status = response.body()?.bStatus
+
+                    if (status == true) {
+                        registrationLiveData.postValue(Response.Success(response.body()))
                     } else {
-                        registrationLiveData.postValue(Response.Error(message))
+                        registrationLiveData.postValue(Response.Error(errorMessage = response.body()!!.sMessage))
                     }
                 } catch (e: Exception) {
                     registrationLiveData.postValue(Response.Error(e.message.toString()))

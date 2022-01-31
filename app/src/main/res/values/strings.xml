@@ -8,4 +8,5 @@
 
     <string name="LOADING_PLEASE_WAIT">Loading Please wait..</string>
     <string name="NO_INTERNET_CONNECTION">No internet connection</string>
+    <string name="FIELD_ARE_REQUIRED">Field are required</string>
 </resources>
