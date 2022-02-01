@@ -16,24 +16,31 @@
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/drawable/ripple_round_button.xml" value="0.11644736842105263" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/drawable/round_button_login.xml" value="0.10822368421052632" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/drawable/round_card_view.xml" value="0.12171052631578948" />
+        <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/drawable/round_reject.xml" value="0.125" />
+        <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/drawable/round_textview2.xml" value="0.125" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/drawable/title_24.xml" value="0.1" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_add_my_receipt.xml" value="0.1" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_daily_time_sheet.xml" value="0.14" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_dashboard_office.xml" value="0.1" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_leave.xml" value="0.15" />
+        <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_leave_approve.xml" value="0.1" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_leave_record.xml" value="0.17" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_login.xml" value="0.15" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_profile2.xml" value="0.17" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_project_list.xml" value="0.16" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_project_status.xml" value="0.1" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_registration.xml" value="0.14" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_spalsh.xml" value="0.11041666666666666" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_timesheet.xml" value="0.1" />
-        <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/item_leave_status.xml" value="0.11151315789473684" />
+        <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/item_leave_status.xml" value="0.17" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/progress_dialog.xml" value="0.1" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/toolba_office_app.xml" value="0.1" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/toolba_reminder.xml" value="0.12" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/toolbar_expense_top.xml" value="0.1" />
+        <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/menu/menu.xml" value="0.11085526315789473" />
+        <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/menu/menu_expense.xml" value="0.11085526315789473" />
+        <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/menu/menu_leave.xml" value="0.11085526315789473" />
       </map>
     </option>
   </component>

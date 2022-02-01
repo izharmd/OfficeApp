@@ -11,6 +11,7 @@ import com.bws.officeapp.Api.RetrofitHelper
 import com.bws.officeapp.R
 import com.bws.officeapp.databinding.ActivityLeaveBinding
 import com.bws.officeapp.databinding.ActivityLeaveRecordBinding
+import com.bws.officeapp.expense.utils.MyPopUpMenu
 import com.bws.officeapp.leave.applyleave.applyviewmodel.ApplyLeaveFactory
 import com.bws.officeapp.leave.applyleave.applyviewmodel.ApplyLeaveRepo
 import com.bws.officeapp.leave.applyleave.applyviewmodel.ApplyViewModel
@@ -19,6 +20,7 @@ import com.bws.officeapp.utils.Response
 import com.bws.officeapp.utils.SharedPreference
 import com.bws.officeapp.utils.ToastMessage
 import kotlinx.android.synthetic.main.toolba_reminder.*
+import java.util.*
 
 class LeaveSummeryActivity : AppCompatActivity() {
 
@@ -35,7 +37,9 @@ class LeaveSummeryActivity : AppCompatActivity() {
 
         sharePref = SharedPreference(this)
 
-        val pram = Param.PramUserLeaveSummary("1", "2022")
+        val currentYear = Calendar.getInstance().get(Calendar.YEAR)
+
+        val pram = Param.PramUserLeaveSummary(sharePref.getValueString("KEY_USER_ID").toString(), currentYear.toString())
 
 
         val applyVM = ViewModelProvider(
@@ -62,19 +66,22 @@ class LeaveSummeryActivity : AppCompatActivity() {
                 is Response.Success -> {
                     loadingDialog.dismiss()
 
-                    binding.txtEmpName.text = sharePref.getValueString("KEY_FIRST_NAME") + " " +sharePref.getValueString("KEY_LAST_NAME")
-
-                    binding.txtTotalLeave.text = it.data?.data?.TotalAllocatedLeave
-                    binding.txtRemainLeave.text = it.data?.data?.RemainingLeave
-
-                    ToastMessage.message(this, it.data?.sMessage.toString())
-
+                    binding.txtEmpName.text = sharePref.getValueString("KEY_TITLE") +" "+ sharePref.getValueString("KEY_FIRST_NAME") + " " +sharePref.getValueString("KEY_LAST_NAME")
+                    binding.txtTotalLeave.text = it.data?.data?.Total
+                    binding.txtEarnLeave.text = it.data?.data?.Earned
+                    binding.txtCasualLeave.text = it.data?.data?.Casual
+                    binding.txtSickLeave.text = it.data?.data?.Sick
+                    binding.txtRemainLeave.text = it.data?.data?.Remaining
                 }
                 is Response.Error -> {
                     loadingDialog.dismiss()
-
                 }
             }
         })
+
+        //Use for side popup menu
+        MyPopUpMenu().populateMenuLeave(this,imv_Shutdown)
+        //BACK TO PREVIOUS ACTIVITY
+        MyPopUpMenu().backToActivity(this,imvBack)
     }
 }

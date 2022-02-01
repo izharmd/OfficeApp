@@ -10,6 +10,7 @@ import com.bws.officeapp.Api.ApiInterface
 import com.bws.officeapp.Api.Param
 import com.bws.officeapp.Api.RetrofitHelper
 import com.bws.officeapp.R
+import com.bws.officeapp.expense.utils.MyPopUpMenu
 import com.bws.officeapp.leave.applyleave.applyviewmodel.ApplyLeaveFactory
 import com.bws.officeapp.leave.applyleave.applyviewmodel.ApplyLeaveRepo
 import com.bws.officeapp.leave.applyleave.applyviewmodel.ApplyViewModel
@@ -65,7 +66,7 @@ class LeaveStatusActivity : AppCompatActivity() {
                         ContextCompat.getDrawable(this@LeaveStatusActivity, R.drawable.line_divider)
                     recyLeaveStatus.addItemDecoration(DividerItemDecoration(dividerDrawable))
 
-                    val adapter = LeaveStatusAdapter(it)
+                    val adapter = LeaveStatusAdapter(this,it)
                     recyLeaveStatus.adapter = adapter
                     adapter.notifyDataSetChanged()
 
@@ -76,6 +77,11 @@ class LeaveStatusActivity : AppCompatActivity() {
                 }
             }
         })
+
+        //Use for side popup menu
+        MyPopUpMenu().populateMenuLeave(this,imv_Shutdown)
+        //BACK TO PREVIOUS ACTIVITY
+        MyPopUpMenu().backToActivity(this,imvBack)
 
     }
 }

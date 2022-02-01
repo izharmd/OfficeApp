@@ -18,6 +18,7 @@ import com.bws.officeapp.Api.RetrofitHelper
 import com.bws.officeapp.ProfileActivity
 import com.bws.officeapp.R
 import com.bws.officeapp.databinding.ActivityLeaveBinding
+import com.bws.officeapp.expense.utils.MyPopUpMenu
 import com.bws.officeapp.leave.applyleave.applyviewmodel.ApplyLeaveFactory
 import com.bws.officeapp.leave.applyleave.applyviewmodel.ApplyLeaveRepo
 import com.bws.officeapp.leave.applyleave.applyviewmodel.ApplyViewModel
@@ -25,10 +26,7 @@ import com.bws.officeapp.timesheet.dailitimesheet.DailyTimeSheetActivity
 import com.bws.officeapp.timesheet.dailitimesheet.projectstatusviewmodel.ProjectListViewModel
 import com.bws.officeapp.timesheet.dailitimesheet.projectstatusviewmodel.ProjectStatusFactory
 import com.bws.officeapp.timesheet.dailitimesheet.projectstatusviewmodel.ProjectStatusRepository
-import com.bws.officeapp.utils.LoadingDialog
-import com.bws.officeapp.utils.Response
-import com.bws.officeapp.utils.SharedPreference
-import com.bws.officeapp.utils.ToastMessage
+import com.bws.officeapp.utils.*
 import kotlinx.android.synthetic.main.activity_daily_time_sheet.*
 import kotlinx.android.synthetic.main.activity_leave.*
 import kotlinx.android.synthetic.main.toolba_reminder.*
@@ -55,6 +53,11 @@ class LeaveActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     var leaveFromDate = ""
     var leaveToDate = ""
 
+    private var year = 0
+    private var month = 0
+    private var day = 0
+    private lateinit var calendar: Calendar
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -64,6 +67,7 @@ class LeaveActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         textUserName.text = resources.getText(R.string.WELCOME_TO_LEAVE_APP)
 
         sharePref = SharedPreference(this)
+        calendar = Calendar.getInstance()
 
         initView()
 
@@ -96,24 +100,41 @@ class LeaveActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     private fun clickEvent() {
 
         binding.txtFromDate.setOnClickListener {
-            val c = Calendar.getInstance()
-            val year = c.get(Calendar.YEAR)
-            val month = c.get(Calendar.MONTH)
-            val day = c.get(Calendar.DAY_OF_MONTH)
-            val dpd = DatePickerDialog(
-                this,
-                DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
-                    binding.txtFromDate.text = "" + dayOfMonth + "-" + month + 1 + "-" + year
-                },
-                year,
-                month,
-                day
-            )
-            dpd.show()
+           Common().dateDialog(this,binding.txtFromDate)
+          //  binding.txtFromDate.text = dt
+
+           /* year = calendar.get(Calendar.YEAR)
+            month = calendar.get(Calendar.MONTH)
+            day = calendar.get(Calendar.DAY_OF_MONTH)
+            val dialog = DatePickerDialog(this, { _, year, month, day_of_month ->
+                calendar[Calendar.YEAR] = year
+                calendar[Calendar.MONTH] = month - 1
+                calendar[Calendar.DAY_OF_MONTH] = day_of_month
+                val myFormat = "dd-MM-yyyy"
+                val sdf = SimpleDateFormat(myFormat, Locale.getDefault())
+                binding.txtFromDate.text = sdf.format(calendar.time)
+            }, calendar[Calendar.YEAR], calendar[Calendar.MONTH], calendar[Calendar.DAY_OF_MONTH])
+           // dialog.datePicker.minDate = calendar.timeInMillis
+           // calendar.add(Calendar.YEAR, 0)
+           // dialog.datePicker.maxDate = calendar.timeInMillis
+            dialog.show()*/
         }
 
         binding.txtToDate.setOnClickListener {
-            val c = Calendar.getInstance()
+            Common().dateDialog(this,binding.txtToDate)
+
+            /*val formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy", Locale.ENGLISH)
+            val formatter1 = DateTimeFormatter.ofPattern("dd-MM-yyyy", Locale.ENGLISH)
+            val date = LocalDate.parse(binding.txtFromDate.toString(), formatter)
+            val date1 = LocalDate.parse(binding.txtToDate.toString(), formatter1)
+
+            if (date.isBefore(date1)){
+                ToastMessage.message(this,"gggggg")
+            }*/
+
+
+
+         /*   val c = Calendar.getInstance()
             val year = c.get(Calendar.YEAR)
             val month = c.get(Calendar.MONTH)
             val day = c.get(Calendar.DAY_OF_MONTH)
@@ -126,11 +147,9 @@ class LeaveActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
                 month,
                 day
             )
-            dpd.show()
+            dpd.show()*/
 
         }
-
-
         binding.btnApplyLeave.setOnClickListener() {
             val isAllCheck = CheckAllFields()
              if (isAllCheck) {
@@ -228,6 +247,11 @@ class LeaveActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         val adapterToDate = ArrayAdapter(this, android.R.layout.simple_spinner_item, list_ToDate)
         adapterToDate.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spToDate!!.setAdapter(adapterToDate)
+
+        //Use for side popup menu
+        MyPopUpMenu().populateMenuLeave(this,imv_Shutdown)
+        //BACK TO PREVIOUS ACTIVITY
+        MyPopUpMenu().backToActivity(this,imvBack)
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
@@ -264,7 +288,7 @@ class LeaveActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     object DateUtils {
         @JvmStatic
         fun toSimpleString(date: Date): String {
-            val format = SimpleDateFormat("MM.dd.yyy")
+            val format = SimpleDateFormat("MM.dd.yyyy")
             return format.format(date)
         }
     }

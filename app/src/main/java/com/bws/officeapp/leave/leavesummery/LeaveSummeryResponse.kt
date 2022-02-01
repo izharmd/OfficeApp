@@ -8,6 +8,9 @@ data class LeaveSummeryResponse(
 )
 
 data class Data(
-    val RemainingLeave: String,
-    val TotalAllocatedLeave: String
+    val Total: String,
+    val Casual: String,
+    val Earned: String,
+    val Sick: String,
+    val Remaining: String
 )

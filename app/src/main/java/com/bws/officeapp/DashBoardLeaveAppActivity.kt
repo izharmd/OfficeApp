@@ -3,6 +3,7 @@ package com.bws.officeapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.bws.officeapp.expense.utils.MyPopUpMenu
 import com.bws.officeapp.leave.applyleave.LeaveActivity
 import com.bws.officeapp.leave.leavesummery.LeaveSummeryActivity
 import com.bws.officeapp.leavestatus.LeaveStatusActivity
@@ -31,5 +32,10 @@ class DashBoardLeaveAppActivity : AppCompatActivity() {
         cardViewProfile.setOnClickListener(){
             startActivity(Intent(this@DashBoardLeaveAppActivity,ProfileActivity::class.java))
         }
+
+        //Use for side popup menu
+        MyPopUpMenu().populateMenuLeave(this,imv_Shutdown)
+        //BACK TO PREVIOUS ACTIVITY
+        MyPopUpMenu().backToActivity(this,imvBack)
     }
 }

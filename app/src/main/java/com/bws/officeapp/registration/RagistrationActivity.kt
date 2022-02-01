@@ -14,6 +14,7 @@ import com.bws.officeapp.Api.ApiInterface
 import com.bws.officeapp.Api.RetrofitHelper
 import com.bws.officeapp.R
 import com.bws.officeapp.databinding.ActivityRegistrationBinding
+import com.bws.officeapp.leave.applyleave.LeaveActivity
 import com.bws.officeapp.login.LoginActivity
 import com.bws.officeapp.registration.designationviewmodel.DesignationFactory
 import com.bws.officeapp.registration.designationviewmodel.DesignationPram
@@ -23,14 +24,18 @@ import com.bws.officeapp.registration.registrationmodel.*
 import com.bws.officeapp.registration.registrationviewmodel.RegistrationFactory
 import com.bws.officeapp.registration.registrationviewmodel.RegistrationRepository
 import com.bws.officeapp.registration.registrationviewmodel.RegistrationViewModel
+import com.bws.officeapp.utils.Common
 import com.bws.officeapp.utils.LoadingDialog
 import com.bws.officeapp.utils.Response
 import com.bws.officeapp.utils.ToastMessage
 import kotlinx.android.synthetic.main.activity_leave.*
 import kotlinx.android.synthetic.main.activity_registration.*
+import java.text.ParseException
+import java.text.SimpleDateFormat
 
 
 import java.util.*
+import kotlin.collections.ArrayList
 
 class RagistrationActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener,
     DatePickerDialog.OnDateSetListener {
@@ -38,12 +43,16 @@ class RagistrationActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
     lateinit var registrationViewModel: RegistrationViewModel
     lateinit var bindingActivity: ActivityRegistrationBinding
 
-    var list_of_designation =
-        arrayOf("Select Designation", "Software Engineer", "Tester", "Project Cordinator")
+
+    var arrListDesignation = ArrayList<String>()
+    var arrListDesignationID = ArrayList<String>()
 
     var selectDesignation: String? = null
 
     private var selection = "Male"
+    var designationId = ""
+    var strDOB = ""
+    var strDOJ = ""
 
     var day = 0
     var month: Int = 0
@@ -57,13 +66,9 @@ class RagistrationActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
         bindingActivity = DataBindingUtil.setContentView(this, R.layout.activity_registration)
 
         bindingActivity.spDesignation!!.setOnItemSelectedListener(this)
-        val aa = ArrayAdapter(this, android.R.layout.simple_spinner_item, list_of_designation)
-        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        bindingActivity.spDesignation!!.setAdapter(aa)
+
 
         initView()
-
-
 
         onClickEvent()
     }
@@ -85,18 +90,19 @@ class RagistrationActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
                     Toast.makeText(this, "NO INTERNET", Toast.LENGTH_LONG).show()
                 }
                 is Response.Loading -> {
-
                     loadingDialog.show()
                 }
                 is Response.Success -> {
+                    for (i in 0..it.data!!.data.size - 1) {
+                        arrListDesignation.add(it.data!!.data.get(i).RoleName)
+                        arrListDesignationID.add(it.data!!.data.get(i).RoleID.toString())
+                    }
 
-                    System.out.println("RESULT===" + it.data.toString())
+                    val aa =
+                        ArrayAdapter(this, android.R.layout.simple_spinner_item, arrListDesignation)
+                    aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+                    bindingActivity.spDesignation!!.setAdapter(aa)
 
-                    val str = it.data?.data?.get(2)?.RoleName
-
-                    System.out.println("RESULT===" + str)
-
-                    Toast.makeText(this, it.data.toString(), Toast.LENGTH_LONG).show()
                     loadingDialog.dismiss()
                 }
                 is Response.Error -> {
@@ -122,11 +128,9 @@ class RagistrationActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
             when (checkedId) {
                 R.id.rdMale -> {
                     selection = "Male"
-                    ToastMessage.message(this, selection)
                 }
                 R.id.rdFemale -> {
                     selection = "Female"
-                    ToastMessage.message(this, selection)
                 }
             }
         }
@@ -134,105 +138,122 @@ class RagistrationActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
 
         bindingActivity.txtDOB.setOnClickListener() {
 
-            val calendar: Calendar = Calendar.getInstance()
-            day = calendar.get(Calendar.DAY_OF_MONTH)
-            month = calendar.get(Calendar.MONTH)
-            year = calendar.get(Calendar.YEAR)
-            val datePickerDialog =
-                DatePickerDialog(
-                    this@RagistrationActivity,
-                    this@RagistrationActivity,
-                    year,
-                    month,
-                    day
-                )
-            datePickerDialog.show()
+            Common().dateDialog(this,bindingActivity.txtDOB)
+            /*val c = Calendar.getInstance()
+            val year = c.get(Calendar.YEAR)
+            val month = c.get(Calendar.MONTH)
+            val day = c.get(Calendar.DAY_OF_MONTH)
+            val dpd = DatePickerDialog(
+                this,
+                DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+                    bindingActivity.txtDOB.text = "" + dayOfMonth + "-" + month + 1 + "-" + year
+                },
+                year,
+                month,
+                day
+            )
+            dpd.show()*/
+
+        }
+
+        bindingActivity.txtDOJ.setOnClickListener {
+            Common().dateDialog(this,bindingActivity.txtDOJ)
+
+            /*val c = Calendar.getInstance()
+            val year = c.get(Calendar.YEAR)
+            val month = c.get(Calendar.MONTH)
+            val day = c.get(Calendar.DAY_OF_MONTH)
+            val dpd = DatePickerDialog(
+                this,
+                DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+                    bindingActivity.txtDOJ.text = "" + dayOfMonth + "-" + month + 1 + "-" + year
+                },
+                year,
+                month,
+                day
+            )
+            dpd.show()*/
         }
 
 
 
         bindingActivity.btnRegister.setOnClickListener() {
-
+            val originalFormat = SimpleDateFormat("dd-MM-yyyy")
+            var dateFrom: Date
+            var dateTo: Date
+            try {
+                dateFrom = originalFormat.parse(bindingActivity.txtDOB.text.toString())
+                dateTo = originalFormat.parse(bindingActivity.txtDOJ.text.toString())
+                strDOB = DateUtils.toSimpleString(dateFrom)
+                strDOJ = DateUtils.toSimpleString(dateTo)
+            } catch (ex: ParseException) {
+                // Handle Exception.
+            }
 
             val isAllCheck = CheckAllFields()
-           // if (isAllCheck) {
+            // if (isAllCheck) {
 
-                /* val regisPram = PramRegistration(
-                     "2",
-                     bindingActivity.edtTitle.text.toString(),
-                     bindingActivity.edtTitle.text.toString(),
-                     bindingActivity.edtTitle.text.toString(),
-                     bindingActivity.edtPhoneNo.text.toString(),
-                     bindingActivity.edtEmail.text.toString(),
-                     "2",
-                     "1989.12.28",
-                     "M",
-                     bindingActivity.edtPassword.text.toString()
-                 )*/
+            /* val regisPram = PramRegistration(
+                 "2",
+                 bindingActivity.edtTitle.text.toString(),
+                 bindingActivity.edtTitle.text.toString(),
+                 bindingActivity.edtTitle.text.toString(),
+                 bindingActivity.edtPhoneNo.text.toString(),
+                 bindingActivity.edtEmail.text.toString(),
+                 "2",
+                 strDOB,
+                 selection,
+                 bindingActivity.edtPassword.text.toString()
+                 strDOJ,
+             )*/
 
-                val regisPram = PramRegistration(
-                    "2",
-                    "Mr",
-                    "Izhar",
-                    "Ansari",
-                    "1236547896",
-                    "izhar.md89@gmail.com",
-                    "Android App Developer",
-                    "1989.12.28",
-                    "M",
-                    "Test@123"
-                )
+            val regisPram = PramRegistration(
+                "2",
+                "Mr",
+                "Izhar",
+                "Ansari",
+                "1236547896",
+                "test1@gmail.com",
+                "Employee",
+                strDOB,
+                "M",
+                "Test@123",
+                strDOJ
+            )
 
-                /*"Title":"Mr",
-                "FirstName":"Izhar",
-                "LastName":"Ansari",
-                "MobileNo":"1236547896",
-                "Emailid":"izhar.md89@gmail.com",
-                "RoleID":"2",
-                "Designation":"Android App Developer",
-                "DOB":"1989.12.28",
-                "Gender":"M",
-                "Password":"Test@123"
-*/
-                System.out.println(regisPram.toString())
+            System.out.println("REGISTRATION===="+regisPram.toString())
 
-                val regFactory = RegistrationFactory(
-                    RegistrationRepository(
-                        RetrofitHelper.getInstance().create(ApiInterface::class.java), regisPram
-                    ), this
-                )
-                registrationViewModel =
-                    ViewModelProvider(this, regFactory).get(RegistrationViewModel::class.java)
-                val loadingDialog = LoadingDialog.progressDialog(this)
-                registrationViewModel.registrationLiveData.observe(this, Observer {
-                    when (it) {
-                        is Response.NoInternet -> {
+            val regFactory = RegistrationFactory(
+                RegistrationRepository(
+                    RetrofitHelper.getInstance().create(ApiInterface::class.java), regisPram
+                ), this
+            )
+            registrationViewModel =
+                ViewModelProvider(this, regFactory).get(RegistrationViewModel::class.java)
+            val loadingDialog = LoadingDialog.progressDialog(this)
+            registrationViewModel.registrationLiveData.observe(this, Observer {
+                when (it) {
+                    is Response.NoInternet -> {
 
-                            loadingDialog.dismiss()
-                            clearViewModel()
-                        }
-                        is Response.Loading -> {
-
-                            loadingDialog.show()
-                        }
-                        is Response.Success -> {
-
-                           // ToastMessage.message(this@RagistrationActivity, "SSSSS")
-                            Toast.makeText(this, it.data.toString(), Toast.LENGTH_LONG).show()
-                            loadingDialog.dismiss()
-                            clearViewModel()
-                        }
-                        is Response.Error -> {
-
-                            Toast.makeText(this, it.errorMessage.toString(), Toast.LENGTH_LONG).show()
-
-
-                            loadingDialog.dismiss()
-                            clearViewModel()
-                        }
+                        loadingDialog.dismiss()
+                        clearViewModel()
                     }
-                })
-          //  }
+                    is Response.Loading -> {
+
+                        loadingDialog.show()
+                    }
+                    is Response.Success -> {
+                        Toast.makeText(this, it.data.toString(), Toast.LENGTH_LONG).show()
+                        loadingDialog.dismiss()
+                        clearViewModel()
+                    }
+                    is Response.Error -> {
+                        Toast.makeText(this, it.errorMessage.toString(), Toast.LENGTH_LONG).show()
+                        loadingDialog.dismiss()
+                        clearViewModel()
+                    }
+                }
+            })
         }
 
         bindingActivity.llAllreadyAccount.setOnClickListener() {
@@ -293,13 +314,27 @@ class RagistrationActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-        // selectDesignation  = parent?.selectedItem as Nothing?
 
-        selectDesignation = parent?.getItemAtPosition(position).toString()
+        when (parent) {
+            bindingActivity.spDesignation -> {
+                designationId = arrListDesignationID.get(position)
+                selectDesignation = parent?.getItemAtPosition(position).toString()
+            }
+        }
+
+
         Log.d("q23we4r5", "werty")
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
         // TODO("Not yet implemented")
+    }
+
+    object DateUtils {
+        @JvmStatic
+        fun toSimpleString(date: Date): String {
+            val format = SimpleDateFormat("yyyy.MM.dd")
+            return format.format(date)
+        }
     }
 }

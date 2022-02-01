@@ -1,3 +1,4 @@
+/*
 package com.bws.officeapp.database
 
 import androidx.room.Entity
@@ -19,3 +20,4 @@ data class UserTable(
     val name:String,
     val address:String
 )
+*/

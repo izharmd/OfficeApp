@@ -141,6 +141,48 @@
 
             </LinearLayout>
 
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight=".5"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:text="Date Of Joining"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"/>
+
+
+                <TextView
+                    android:id="@+id/txtDOJ"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center"
+                    android:layout_weight=".5"
+                    android:background="@drawable/round_edit_text"
+                    android:drawableRight="@drawable/date_range_24"
+                    android:gravity="center|left"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:text="19-01-2022"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="@dimen/_14sdp" />
+
+
+            </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

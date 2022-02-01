@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <include layout="@layout/toolba_reminder"></include>
+        <include layout="@layout/toolba_reminder"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -20,7 +20,7 @@
             android:gravity="center"
             android:text="Leave Summary"
             android:textColor="@color/white"
-            android:textSize="@dimen/_16sdp"></TextView>
+            android:textSize="@dimen/_16sdp"/>
 
 
         <LinearLayout
@@ -41,7 +41,7 @@
                 android:paddingLeft="@dimen/_10sdp"
                 android:text="Employee Name"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_12sdp"></TextView>
+                android:textSize="@dimen/_12sdp"/>
 
 
             <TextView
@@ -51,9 +51,9 @@
                 android:layout_weight="1.2"
                 android:gravity="center|left"
                 android:paddingLeft="@dimen/_30sdp"
-                android:text="Mr James"
+                android:text=""
                 android:textColor="@color/black"
-                android:textSize="@dimen/_12sdp"></TextView>
+                android:textSize="@dimen/_12sdp"/>
 
         </LinearLayout>
 
@@ -75,7 +75,7 @@
                 android:paddingLeft="@dimen/_10sdp"
                 android:text="Total Leave"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_12sdp"></TextView>
+                android:textSize="@dimen/_12sdp"/>
 
 
             <TextView
@@ -85,9 +85,9 @@
                 android:layout_weight="1.2"
                 android:gravity="center|left"
                 android:paddingLeft="@dimen/_30sdp"
-                android:text="32"
+                android:text=""
                 android:textColor="@color/black"
-                android:textSize="@dimen/_12sdp"></TextView>
+                android:textSize="@dimen/_12sdp"/>
 
         </LinearLayout>
 
@@ -109,7 +109,7 @@
                 android:paddingLeft="@dimen/_10sdp"
                 android:text="Earned Leave"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_12sdp"></TextView>
+                android:textSize="@dimen/_12sdp"/>
 
 
             <TextView
@@ -119,9 +119,9 @@
                 android:layout_weight="1.2"
                 android:gravity="center|left"
                 android:paddingLeft="@dimen/_30sdp"
-                android:text="12"
+                android:text=""
                 android:textColor="@color/black"
-                android:textSize="@dimen/_12sdp"></TextView>
+                android:textSize="@dimen/_12sdp"/>
 
         </LinearLayout>
 
@@ -143,7 +143,7 @@
                 android:paddingLeft="@dimen/_10sdp"
                 android:text="Casual Leave"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_12sdp"></TextView>
+                android:textSize="@dimen/_12sdp"/>
 
 
             <TextView
@@ -153,9 +153,9 @@
                 android:layout_weight="1.2"
                 android:gravity="center|left"
                 android:paddingLeft="@dimen/_30sdp"
-                android:text="16"
+                android:text=""
                 android:textColor="@color/black"
-                android:textSize="@dimen/_12sdp"></TextView>
+                android:textSize="@dimen/_12sdp"/>
 
         </LinearLayout>
 
@@ -178,7 +178,7 @@
                 android:paddingLeft="@dimen/_10sdp"
                 android:text="Sick Leave"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_12sdp"></TextView>
+                android:textSize="@dimen/_12sdp"/>
 
 
             <TextView
@@ -189,9 +189,9 @@
                 android:drawablePadding="@dimen/_5sdp"
                 android:gravity="center|left"
                 android:paddingLeft="@dimen/_30sdp"
-                android:text="10"
+                android:text=""
                 android:textColor="@color/black"
-                android:textSize="@dimen/_12sdp"></TextView>
+                android:textSize="@dimen/_12sdp"/>
 
         </LinearLayout>
 
@@ -214,7 +214,7 @@
                 android:paddingLeft="@dimen/_10sdp"
                 android:text="Remaining Leave"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_12sdp"></TextView>
+                android:textSize="@dimen/_12sdp"/>
 
 
             <TextView
@@ -224,9 +224,9 @@
                 android:layout_weight="1.2"
                 android:gravity="center|left"
                 android:paddingLeft="@dimen/_30sdp"
-                android:text="04"
+                android:text=""
                 android:textColor="@color/black"
-                android:textSize="@dimen/_12sdp"></TextView>
+                android:textSize="@dimen/_12sdp"/>
 
         </LinearLayout>
 

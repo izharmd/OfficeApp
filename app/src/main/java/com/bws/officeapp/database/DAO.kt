@@ -1,3 +1,4 @@
+/*
 package com.bws.officeapp.database
 
 import androidx.lifecycle.LiveData
@@ -34,4 +35,4 @@ interface UserDAO {
     @Query("SELECT * FROM User")
     fun getUser(): LiveData<List<UserTable>>
 
-}
+}*/

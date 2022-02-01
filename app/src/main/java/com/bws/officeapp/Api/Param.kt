@@ -37,5 +37,13 @@ class Param {
 
     //LEAVE SUMMERY
 
-    data class PramUserLeaveSummary(val UserID:String,val Year:String)
+    data class PramUserLeaveSummary(val UserID: String, val Year: String)
+
+    // APPROVE LEAVE
+    data class PramApproveLeave(
+        val UserID: String,
+        val LeaveID: String,
+        val IsApproved: String,
+        val ApprovalNotes: String
+    )
 }

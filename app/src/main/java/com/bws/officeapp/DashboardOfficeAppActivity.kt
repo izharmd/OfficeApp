@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.bws.officeapp.expense.ExpenseOverViewActivity
+import com.bws.officeapp.expense.utils.MyPopUpMenu
 import com.bws.officeapp.policy.PolicyDocumentActivity
 import com.bws.officeapp.timesheet.TimeSheetDashboardActivity
 import kotlinx.android.synthetic.main.activity_dashboard_office.*
@@ -36,5 +37,10 @@ class DashboardOfficeAppActivity:AppCompatActivity() {
         cardViewPolicyDocument.setOnClickListener(){
             startActivity(Intent(this@DashboardOfficeAppActivity,PolicyDocumentActivity::class.java))
         }
+
+        //Use for side popup menu
+        MyPopUpMenu().populateMenuLeave(this,imv_Shutdown)
+        //BACK TO PREVIOUS ACTIVITY
+        MyPopUpMenu().backToActivity(this,imvBack)
     }
 }

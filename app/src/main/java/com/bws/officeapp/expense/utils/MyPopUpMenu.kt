@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.widget.ImageView
 import androidx.appcompat.widget.PopupMenu
+import com.bws.officeapp.ProfileActivity
 import com.bws.officeapp.R
 import com.bws.officeapp.expense.AddNewExpenseActivity
 import com.bws.officeapp.expense.ViewExpansegraphActivity
@@ -11,8 +12,11 @@ import com.bws.officeapp.expense.claim.AddNewClaimActivity
 import com.bws.officeapp.expense.pendingapproval.PendingApprovalActivity
 import com.bws.officeapp.expense.receipts.AddMyReceiptsActivity
 import com.bws.officeapp.expense.trip.AddNewTripActivity
+import com.bws.officeapp.utils.SharedPreference
 
 class MyPopUpMenu {
+
+    lateinit var sharePref: SharedPreference
 
     fun popuLateMenu(context: Activity, imag: ImageView) {
 
@@ -46,7 +50,30 @@ class MyPopUpMenu {
 
     }
 
-    public fun cl() {
+     fun populateMenuLeave(context: Activity, imag: ImageView) {
 
+         imag.setOnClickListener() {
+             val popupMenu: PopupMenu = PopupMenu(context, imag)
+             popupMenu.menuInflater.inflate(R.menu.menu_leave, popupMenu.menu)
+             popupMenu.setOnMenuItemClickListener(PopupMenu.OnMenuItemClickListener { item ->
+                 when (item.itemId) {
+                     R.id.profile ->{
+                         context.startActivity(Intent(context, ProfileActivity::class.java))
+                     }
+                     R.id.logOut ->{
+                         sharePref.removeValue("KEY_USER_ID")
+                     }
+                 }
+                 true
+             })
+             popupMenu.show()
+         }
+     }
+
+    fun backToActivity(context: Activity,imvBack:ImageView){
+
+        imvBack.setOnClickListener {
+            context.finish()
+        }
     }
 }

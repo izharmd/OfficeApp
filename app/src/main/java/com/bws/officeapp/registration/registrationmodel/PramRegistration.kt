@@ -10,5 +10,6 @@ data class PramRegistration(
     val Designation:String,
     val DOB:String,
     val Gender:String,
-    val Password:String
+    val Password:String,
+    val DOJ:String
 )

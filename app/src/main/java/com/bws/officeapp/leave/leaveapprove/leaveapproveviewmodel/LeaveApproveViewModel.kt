@@ -1,20 +1,18 @@
-package com.bws.officeapp.leave.leavesummery
+package com.bws.officeapp.leave.leaveapprove.leaveapproveviewmodel
 
 import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.bws.officeapp.R
+import com.bws.officeapp.leave.leavesummery.LeaveSummeryResponse
 import com.bws.officeapp.utils.NetworkUtils
-
 import com.bws.officeapp.utils.Response
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
+class LeaveApproveViewModel(val repo: LeaveApproveRepo, val context: Context) : ViewModel() {
 
-class LeaveSummeryViewModel(val repo: LeaveSummeryRepo, val context: Context) : ViewModel() {
-
-    var liveData: MutableLiveData<Response<LeaveSummeryResponse>>
+    var liveData: MutableLiveData<Response<LeaveApproveResponse>>
 
     init {
         liveData = MutableLiveData()
@@ -26,7 +24,7 @@ class LeaveSummeryViewModel(val repo: LeaveSummeryRepo, val context: Context) : 
             liveData.postValue(Response.Loading(loadingMessage = context.resources.getString(R.string.LOADING_PLEASE_WAIT)))
             if (NetworkUtils.isNetworkAvailable(context)) {
                 try {
-                    val response = repo.getUserLeaveSummery()
+                    val response = repo.getLeaveApprove()
                     val status = response.body()?.bStatus
                     if (status == true) {
                         liveData.postValue(Response.Success(response.body()))

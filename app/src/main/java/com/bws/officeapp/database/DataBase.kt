@@ -1,3 +1,4 @@
+/*
 package com.bws.officeapp.database
 
 import androidx.room.Database
@@ -8,4 +9,4 @@ abstract class DataBase : RoomDatabase() {
     abstract fun loginDao(): LoginDAO
     abstract fun  userDao(): UserDAO
 
-}
+}*/

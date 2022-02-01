@@ -239,6 +239,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_reason"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_30sdp"
             android:layout_marginTop="@dimen/_5sdp"
@@ -256,7 +257,7 @@
                 android:paddingLeft="@dimen/_5sdp"
                 android:text="Reason"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_12sdp"></TextView>
+                android:textSize="@dimen/_12sdp"/>
 
 
             <TextView
@@ -268,7 +269,7 @@
                 android:paddingLeft="@dimen/_10sdp"
                 android:text="14C1686"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_12sdp"></TextView>
+                android:textSize="@dimen/_12sdp"/>
 
         </LinearLayout>
 
@@ -285,9 +286,9 @@
             android:gravity="center"
             android:paddingRight="@dimen/_5sdp"
             android:text="Details"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="@dimen/_12sdp"
-            android:visibility="gone"></TextView>
+            android:visibility="visible"/>
 
     </LinearLayout>
 

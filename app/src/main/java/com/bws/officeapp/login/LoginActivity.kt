@@ -16,9 +16,7 @@ import com.bws.officeapp.Api.ApiInterface
 import com.bws.officeapp.Api.RetrofitHelper
 import com.bws.officeapp.DashboardOfficeAppActivity
 import com.bws.officeapp.R
-import com.bws.officeapp.database.LoginTable
-import com.bws.officeapp.database.DataBase
-import com.bws.officeapp.database.UserTable
+
 import com.bws.officeapp.databinding.ActivityLoginBinding
 import com.bws.officeapp.login.loginmodel.LoginPram
 import com.bws.officeapp.login.loginviewmodel.LoginFactory
@@ -36,7 +34,7 @@ import kotlin.random.Random
 
 class LoginActivity : AppCompatActivity(){
     lateinit var binding: ActivityLoginBinding
-    lateinit var database: DataBase
+   // lateinit var database: DataBase
     lateinit var sharedPref:SharedPreference
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,7 +49,7 @@ class LoginActivity : AppCompatActivity(){
         }
 
 
-        database =
+      /*  database =
             Room.databaseBuilder(applicationContext, DataBase::class.java, "officeAppDB")
                 .build()
 
@@ -60,7 +58,7 @@ class LoginActivity : AppCompatActivity(){
                 .insertUserDetails(LoginTable(0, "izhar@gmail.com", "9163252224", "izhar@123"))
             database.userDao().insetUser(UserTable(0, "Izhar Ansari", "Giridih"))
         }
-
+*/
 
 
         binding.btnLogin.setOnClickListener() {
@@ -78,7 +76,7 @@ class LoginActivity : AppCompatActivity(){
                 sessionId,"1234445",ipAddress,"57.00000",deviceID)*/
 
             val loginPram = LoginPram(
-                "izhar.md89@gmail.com", "Test@123",
+                "test112@gmail.com", "Test@123",
                 sessionId,"1234445",ipAddress,"57.00000",deviceID)
 
             System.out.println("LOGIN PRAM==="+loginPram.toString())
@@ -103,12 +101,19 @@ class LoginActivity : AppCompatActivity(){
                     is Response.Success -> {
                         loadingDialog.dismiss()
                         val userDetails = it.data?.data?.get(0)
+
                         sharedPref.saveString("KEY_USER_ID", userDetails!!.UserID.toString())
-                        sharedPref.saveString("KEY_FIRST_NAME", userDetails!!.FirstName.toString())
-                        sharedPref.saveString("KEY_LAST_NAME", userDetails!!.LastName.toString())
+                        sharedPref.saveString("KEY_TITLE", userDetails!!.Title)
+                        sharedPref.saveString("KEY_FIRST_NAME", userDetails!!.FirstName)
+                        sharedPref.saveString("KEY_LAST_NAME", userDetails!!.LastName)
                         sharedPref.saveString("KEY_EMAIL_ID", userDetails!!.EmailID)
                         sharedPref.saveString("KEY_DESIGNATION", userDetails!!.Designation)
                         sharedPref.saveString("KEY_DOB", userDetails!!.DOB)
+                        sharedPref.saveString("KEY_ROLL_ID", userDetails!!.RoleID.toString())
+                        sharedPref.saveString("KEY_ROLL_NAME", userDetails!!.RoleName)
+                        sharedPref.saveString("KEY_MOBILE", userDetails!!.MobileNo.toString())
+                      //  sharedPref.saveString("KEY_DOJ", userDetails!!.DOJ)
+
                         clearViewModel()
                         startActivity(Intent(this@LoginActivity, DashboardOfficeAppActivity::class.java))
                     }

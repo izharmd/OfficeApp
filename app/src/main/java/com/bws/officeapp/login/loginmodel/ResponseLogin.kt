@@ -8,12 +8,16 @@ data class ResponseLogin(
 )
 
 data class Data(
-    val DOB: String,
-    val Designation: String,
+    val Message: String,
+    val UserID: Int,
     val EmailID: String,
+    val Title: String,
     val FirstName: String,
     val LastName: String,
-    val Message: String,
-    val Title: String,
-    val UserID: Int
+    val Designation: String,
+    val DOB: String,
+    val RoleID: Int,
+    val RoleName: String,
+    val MobileNo: Int,
+    val DOJ: String,
 )

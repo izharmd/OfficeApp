@@ -1,6 +1,7 @@
 package com.bws.officeapp.Api
 
 import com.bws.officeapp.leave.applyleave.applyviewmodel.ResponseApplyLeave
+import com.bws.officeapp.leave.leaveapprove.leaveapproveviewmodel.LeaveApproveResponse
 import com.bws.officeapp.leave.leavesummery.LeaveSummeryResponse
 import com.bws.officeapp.leavestatus.leavestatusviewmodel.LeaveStatusFactory
 import com.bws.officeapp.leavestatus.leavestatusviewmodel.LeaveStatusResponse
@@ -56,5 +57,9 @@ interface ApiInterface {
     @Headers("API_KEY:A862A321-15CA-4265-B188-3959E38A94D2")
     @POST("UserLeaveSummary")
     suspend fun callUserLeaveSummary(@Body pram:Param.PramUserLeaveSummary):Response<LeaveSummeryResponse>
+
+    @Headers("API_KEY:A862A321-15CA-4265-B188-3959E38A94D2")
+    @POST("ApproveLeave")
+    suspend fun callLeaveApprove(@Body pram:Param.PramApproveLeave):Response<LeaveApproveResponse>
 
 }
