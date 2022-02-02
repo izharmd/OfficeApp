@@ -10,8 +10,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bws.officeapp.R
 import com.bws.officeapp.timesheet.MekkoChartActivity
+import com.bws.officeapp.timesheet.projectstatus.projectstatusviewmodel.ProjectStatusResponse
+import com.bws.officeapp.utils.Response
 
-class ProjectStatusAdapter(val mList: ArrayList<ProjectStatusModel>) :
+class ProjectStatusAdapter(val mList: Response<ProjectStatusResponse>) :
     RecyclerView.Adapter<ProjectStatusAdapter.ViewHolder>() {
 
     private var context: Context? = null
@@ -24,37 +26,36 @@ class ProjectStatusAdapter(val mList: ArrayList<ProjectStatusModel>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val projectStatusModel = mList[position]
+        val projectStatusModel = mList.data?.data?.ProjectList?.get(position)
+        holder.txtProjectName.text = projectStatusModel?.ProjectName
+        holder.txtProStartDate.text = projectStatusModel?.StartDate
+        holder.txtDeliveryDate.text = projectStatusModel?.AgreedDeliveryDate
+        holder.txtProStatus.text = projectStatusModel?.ProjectStatus
 
-        holder.txtProjectName.text = projectStatusModel.projectName
-        holder.txtProStartDate.text = projectStatusModel.date
-        holder.txtStartTime.text = projectStatusModel.time
-        holder.txtProStatus.text = projectStatusModel.status
+        val status = projectStatusModel?.ProjectStatus
 
-        val status = projectStatusModel.status
-
-        if(status.equals("Competed",true)){
+        if(status?.equals("Competed") == true){
             holder.txtProStatus.setTextColor(Color.parseColor("#088C08"));
         }else{
             holder.txtProStatus.setTextColor(Color.parseColor("#ed1a2e"));
         }
 
-        holder.itemView.setOnClickListener(){
+       /* holder.itemView.setOnClickListener(){
             val intent = Intent(context, MekkoChartActivity::class.java)
             context?.startActivity(intent)
-        }
+        }*/
 
     }
 
     override fun getItemCount(): Int {
-        return mList.size
+        return mList.data?.data?.ProjectList?.size!!
     }
 
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
 
         val txtProjectName: TextView = itemView.findViewById(R.id.txtProjectName)
         val txtProStartDate: TextView = itemView.findViewById(R.id.txtProStartDate)
-        val txtStartTime: TextView = itemView.findViewById(R.id.txtStartTime)
+        val txtDeliveryDate: TextView = itemView.findViewById(R.id.txtDeliveryDate)
         val txtProStatus: TextView = itemView.findViewById(R.id.txtProStatus)
 
     }

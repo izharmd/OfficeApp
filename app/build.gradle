@@ -92,7 +92,9 @@ dependencies {
     kapt("androidx.room:room-compiler:$roomVersion")
     implementation("androidx.room:room-ktx:$roomVersion")
 
-
+    //Multi selection spinner
+    implementation 'com.github.AnuraganuPunalur:Multi-Selection-Spinner-Android:1.0'
+    implementation 'com.github.telichada:SearchableMultiSelectSpinner:2.0'//https://github.com/telichada/SearchableMultiSelectSpinner
 
 
 }

@@ -17,25 +17,30 @@ import com.bws.officeapp.leave.applyleave.applyviewmodel.ApplyViewModel
 import com.bws.officeapp.leavestatus.leavestatusviewmodel.LeaveStatusFactory
 import com.bws.officeapp.leavestatus.leavestatusviewmodel.LeaveStatusRepo
 import com.bws.officeapp.leavestatus.leavestatusviewmodel.LeaveStatusViewModel
+import com.bws.officeapp.utils.DateHeader
 import com.bws.officeapp.utils.LoadingDialog
 import com.bws.officeapp.utils.Response
+import com.bws.officeapp.utils.SharedPreference
 import com.dgreenhalgh.android.simpleitemdecoration.linear.DividerItemDecoration
 import kotlinx.android.synthetic.main.activity_leave_status.*
 import kotlinx.android.synthetic.main.toolba_reminder.*
 import java.util.ArrayList
 
 class LeaveStatusActivity : AppCompatActivity() {
+
+    lateinit var sharePref:SharedPreference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_leave_status)
         supportActionBar?.hide()
         textUserName.text = resources.getText(R.string.WELCOME_TO_LEAVE_APP)
+        sharePref = SharedPreference(this)
 
         recyLeaveStatus.layoutManager = LinearLayoutManager(this)
+        DateHeader().dateToHeader(this, textDate, textUserName, "Welcome To Office App")
 
 
-        val pram = Param.PramUserLeaveDetails("1", "10", "1")
-
+        val pram = Param.PramUserLeaveDetails(sharePref.getValueString("KEY_USER_ID").toString(), "10", "1")
 
         val leaveStatusVM = ViewModelProvider(
             this,

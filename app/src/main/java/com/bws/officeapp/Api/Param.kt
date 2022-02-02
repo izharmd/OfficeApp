@@ -46,4 +46,58 @@ class Param {
         val IsApproved: String,
         val ApprovalNotes: String
     )
+
+    // USER LIST
+    data class PramUserList(val Type: String)
+
+    //ADD PROJECT
+    data class PramAddProject(
+        val AgreedDeliveryDate: String,
+        val AgreedTime: String,
+        val Allocatedlist: List<Allocatedlist>,
+        val ProjectID: String,
+        val StartDate: String,
+        val UserID: String
+    )
+
+    data class Allocatedlist(
+        val UserID_Fk: String
+    )
+
+    // PROJECT STATUS LIST
+    data class PramUserProjectDetails(
+        val UserID: String,
+        val PageSize: String,
+        val CurrentPageNo: String
+    )
+
+
+    // SEARCH BY PROJECT NAME
+    data class PramSearchByProjectName(
+        val UserID: String,
+        val SearchType: String,
+        val ProjectName: String,
+        val PageSize: String,
+        val CurrentPageNo: String
+    )
+
+    // SEARCH BY PROJECT STATUS
+    data class PramSearchByProjectStatus(
+        val UserID: String,
+        val SearchType: String,
+        val ProjectStatus: String,
+        val PageSize: String,
+        val CurrentPageNo: String
+    )
+
+    // SEARCH BY PROJECT DATE RANGE
+    data class PramSearchByProjectDateRange(
+        val UserID: String,
+        val SearchType: String,
+        val FromDate: String,
+        val ToDate: String,
+        val PageSize: String,
+        val CurrentPageNo: String
+    )
 }
+

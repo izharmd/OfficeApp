@@ -20,6 +20,7 @@
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/drawable/round_textview2.xml" value="0.125" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/drawable/title_24.xml" value="0.1" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_add_my_receipt.xml" value="0.1" />
+        <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_add_project.xml" value="0.16" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_daily_time_sheet.xml" value="0.14" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_dashboard_office.xml" value="0.1" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_leave.xml" value="0.15" />
@@ -31,9 +32,11 @@
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_project_list.xml" value="0.16" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_project_status.xml" value="0.1" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_registration.xml" value="0.14" />
+        <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_search_project.xml" value="0.17" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_spalsh.xml" value="0.11041666666666666" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/activity_timesheet.xml" value="0.1" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/item_leave_status.xml" value="0.17" />
+        <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/item_project_status.xml" value="0.15" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/progress_dialog.xml" value="0.1" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/toolba_office_app.xml" value="0.1" />
         <entry key="..\:/IZHAR_WORKSPACE/OFFICE_APP/OfficeApp/app/src/main/res/layout/toolba_reminder.xml" value="0.12" />

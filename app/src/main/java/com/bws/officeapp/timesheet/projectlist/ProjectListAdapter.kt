@@ -25,7 +25,7 @@ class ProjectListAdapter(val mList:ArrayList<ProjectListModel>):RecyclerView.Ada
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val modelProjectList = mList[position]
-        holder.txtProjectName.text = modelProjectList.projectEndDate
+        holder.txtProjectName.text = modelProjectList.projectName
         holder.txtAllocatedBy.text = modelProjectList.alocatedBy
         holder.txtProStartDate.text = modelProjectList.projectStartDate
         holder.txtProEndDate.text = modelProjectList.projectEndDate
@@ -35,7 +35,7 @@ class ProjectListAdapter(val mList:ArrayList<ProjectListModel>):RecyclerView.Ada
 
         val pStatus = modelProjectList.projectStatus
 
-        if(pStatus.equals("Completed",true)){
+        if(pStatus.equals("Completed")){
             holder.txtProStatus.setTextColor(Color.parseColor("#088C08"));
         }else{
             holder.txtProStatus.setTextColor(Color.parseColor("#ed1a2e"));

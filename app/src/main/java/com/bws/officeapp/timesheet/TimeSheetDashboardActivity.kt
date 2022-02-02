@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.PopupMenu
 import com.bws.officeapp.R
 import com.bws.officeapp.timesheet.dailitimesheet.DailyTimeSheetActivity
+import com.bws.officeapp.timesheet.searchproject.SearchProjectActivity
 import com.bws.timesheet.projectstatus.ProjectStatusActvity
 import kotlinx.android.synthetic.main.activity_timesheet.*
 import kotlinx.android.synthetic.main.toolba_reminder.*
@@ -24,7 +25,7 @@ class TimeSheetDashboardActivity:AppCompatActivity() {
         }
 
         carViewManageProject.setOnClickListener(){
-            startActivity(Intent(this@TimeSheetDashboardActivity,SearchProjectActivity::class.java))
+            startActivity(Intent(this@TimeSheetDashboardActivity, SearchProjectActivity::class.java))
         }
 
         cardViewCalendar.setOnClickListener(){

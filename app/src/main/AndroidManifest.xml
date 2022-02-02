@@ -8,9 +8,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/app_icon_512"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/app_icon_512"
         android:supportsRtl="true"
         android:theme="@style/Theme.OfficeApp"
         android:usesCleartextTraffic="true">
@@ -52,10 +52,10 @@
             android:name=".timesheet.projectlist.ProjectListActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".timesheet.SearchProjectActivity"
+            android:name=".timesheet.searchproject.SearchProjectActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".timesheet.AddProjectActivity"
+            android:name=".timesheet.addproject.AddProjectActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".timesheet.CalendarActivity"

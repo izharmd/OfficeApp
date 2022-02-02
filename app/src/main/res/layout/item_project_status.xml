@@ -86,18 +86,18 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:drawableLeft="@drawable/spend_time_24"
+            android:drawableLeft="@drawable/end_date_range_24"
             android:drawablePadding="@dimen/_5sdp"
             android:textColor="@color/black"
             android:gravity="center|left"
             android:paddingRight="@dimen/_5sdp"
             android:paddingLeft="@dimen/_5sdp"
-            android:text="Start Time"
+            android:text="Agreed Delivery Date"
             android:textSize="@dimen/_12sdp"></TextView>
 
 
         <TextView
-            android:id="@+id/txtStartTime"
+            android:id="@+id/txtDeliveryDate"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

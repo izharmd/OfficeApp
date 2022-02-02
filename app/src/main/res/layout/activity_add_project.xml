@@ -1,210 +1,240 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <include layout="@layout/toolba_reminder"></include>
+    <data>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_40sdp"
-        android:layout_marginBottom="@dimen/_10sdp"
-        android:background="@color/base_color"
-        android:gravity="center"
-        android:text="Add Project"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_16sdp"></TextView>
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:paddingLeft="@dimen/_10sdp"
-        android:text="Project Name"
-        android:drawablePadding="@dimen/_5sdp"
-        android:drawableLeft="@drawable/project_name_24"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_12sdp">
-
-    </TextView>
+    </data>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/_10sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginRight="@dimen/_10sdp"
-        android:background="@drawable/round_ll_border"
-        android:orientation="horizontal"
-        android:weightSum="1">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <Spinner
-            android:id="@+id/spinner1"
-            android:layout_width="0dp"
+        <include layout="@layout/toolba_reminder"></include>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@color/base_color"
+            android:gravity="center"
+            android:text="Add Project"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="Project Name"
+            android:drawablePadding="@dimen/_5sdp"
+            android:drawableLeft="@drawable/project_name_24"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/round_ll_border"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight=".9"
+                android:background="@null" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|left"
+                android:layout_weight=".1"
+                android:src="@drawable/drop_down_18"></ImageView>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="Allocated To"
+            android:drawablePadding="@dimen/_5sdp"
+            android:drawableLeft="@drawable/user_id_24"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/round_ll_border"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/txtAllocatedTo"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight=".9"
+                android:text="Select"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/_5sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:background="@null" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|left"
+                android:layout_weight=".1"
+                android:src="@drawable/drop_down_18"></ImageView>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtDT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="Start Date"
+            android:textColor="@color/black"
+            android:drawablePadding="@dimen/_5sdp"
+            android:drawableLeft="@drawable/date_range_24"
+            android:textSize="@dimen/_12sdp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtStartDate"
+            android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_weight=".9"
-            android:background="@null"/>
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center|left"
-            android:layout_weight=".1"
-            android:src="@drawable/drop_down_18"></ImageView>
-
-
-    </LinearLayout>
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:paddingLeft="@dimen/_10sdp"
-        android:text="Allocated By"
-        android:drawablePadding="@dimen/_5sdp"
-        android:drawableLeft="@drawable/user_id_24"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_12sdp">
-
-    </TextView>
-
-    <EditText
-        android:id="@+id/txtAlocatedBy"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginLeft="@dimen/_10sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginRight="@dimen/_10sdp"
-        android:background="@drawable/round_ll_border"
-        android:gravity="center|left"
-        android:textSize="@dimen/_12sdp"
-        android:paddingLeft="@dimen/_10sdp"
-        android:paddingRight="@dimen/_5sdp" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:paddingLeft="@dimen/_10sdp"
-        android:text="Start Date"
-        android:textColor="@color/black"
-        android:drawablePadding="@dimen/_5sdp"
-        android:drawableLeft="@drawable/date_range_24"
-        android:textSize="@dimen/_12sdp">
-
-    </TextView>
-
-    <EditText
-        android:id="@+id/txtDate"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginLeft="@dimen/_10sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginRight="@dimen/_10sdp"
-        android:background="@drawable/round_ll_border"
-        android:gravity="center|left"
-        android:textSize="@dimen/_12sdp"
-        android:paddingLeft="@dimen/_10sdp"
-        android:paddingRight="@dimen/_5sdp" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:paddingLeft="@dimen/_10sdp"
-        android:text="Agreed Delivery Date"
-        android:textColor="@color/black"
-        android:drawablePadding="@dimen/_5sdp"
-        android:drawableLeft="@drawable/end_date_range_24"
-        android:textSize="@dimen/_12sdp">
-
-    </TextView>
-
-    <EditText
-        android:id="@+id/edtAggredDate"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginLeft="@dimen/_10sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginRight="@dimen/_10sdp"
-        android:background="@drawable/round_ll_border"
-        android:gravity="center|left"
-        android:textSize="@dimen/_12sdp"
-        android:paddingLeft="@dimen/_10sdp"
-        android:paddingRight="@dimen/_5sdp" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:paddingLeft="@dimen/_10sdp"
-        android:text="Agreed Time"
-        android:textColor="@color/black"
-        android:drawablePadding="@dimen/_5sdp"
-        android:drawableLeft="@drawable/time_24"
-        android:textSize="@dimen/_12sdp">
-
-    </TextView>
-
-    <EditText
-        android:id="@+id/edtAggredTime"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginLeft="@dimen/_10sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginRight="@dimen/_10sdp"
-        android:background="@drawable/round_ll_border"
-        android:gravity="center|left"
-        android:textSize="@dimen/_12sdp"
-        android:paddingLeft="@dimen/_10sdp"
-        android:paddingRight="@dimen/_5sdp" />
-
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:weightSum="2">
-
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/round_ll_border"
+            android:gravity="center|left"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_5sdp" />
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="@dimen/_35sdp"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:background="@drawable/round_cancle_button"
-            android:gravity="center"
-            android:text="Cancle"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_14sdp"></TextView>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="Agreed Delivery Date"
+            android:textColor="@color/black"
+            android:drawablePadding="@dimen/_5sdp"
+            android:drawableLeft="@drawable/end_date_range_24"
+            android:textSize="@dimen/_12sdp">
 
+        </TextView>
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="@dimen/_35sdp"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:background="@drawable/round_button_ripple"
-            android:gravity="center"
-            android:text="Save"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_14sdp"></TextView>
+            android:id="@+id/txtAgreedDeliveryDate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/round_ll_border"
+            android:gravity="center|left"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_5sdp" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="Agreed Time"
+            android:textColor="@color/black"
+            android:drawablePadding="@dimen/_5sdp"
+            android:drawableLeft="@drawable/time_24"
+            android:textSize="@dimen/_12sdp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtAgreedTime"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/round_ll_border"
+            android:gravity="center|left"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_5sdp" />
+
+        <com.anurag.multiselectionspinner.MultiSpinner
+            android:id="@+id/spinnerMultiSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:weightSum="2">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/round_cancle_button"
+                android:gravity="center"
+                android:text="Cancle"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"></TextView>
+
+
+            <TextView
+                android:id="@+id/txtSave"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/round_button_ripple"
+                android:gravity="center"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"/>
+        </LinearLayout>
 
     </LinearLayout>
-
-
-
-</LinearLayout>
+</layout>

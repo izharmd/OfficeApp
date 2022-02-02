@@ -6,6 +6,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.ArrayMap;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.anychart.AnyChart;
@@ -25,12 +27,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ChartActivity extends AppCompatActivity {
+
+    ArrayMap<String,String> arr;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chart);
         AnyChartView anyChartView = findViewById(R.id.any_chart_view);
         anyChartView.setProgressBar(findViewById(R.id.progress_bar));
+
+        arr = new ArrayMap<>();
 
         Cartesian cartesian = AnyChart.cartesian();
 

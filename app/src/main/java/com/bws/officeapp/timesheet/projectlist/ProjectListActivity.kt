@@ -8,39 +8,64 @@ import androidx.appcompat.widget.PopupMenu
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bws.officeapp.R
-import com.bws.officeapp.timesheet.AddProjectActivity
+import com.bws.officeapp.timesheet.addproject.AddProjectActivity
 import com.bws.officeapp.timesheet.ProfileTimeSheetActivity
+import com.bws.officeapp.utils.ToastMessage
 import com.dgreenhalgh.android.simpleitemdecoration.linear.DividerItemDecoration
+import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_project_list.*
 import kotlinx.android.synthetic.main.toolba_reminder.*
+import org.json.JSONObject
+
+import org.json.JSONArray
 
 
-class ProjectListActivity:AppCompatActivity() {
+class ProjectListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_project_list)
         supportActionBar?.hide()
         textUserName.text = resources.getText(R.string.WELCOME_TO_TIME_SHEET_APP)
-
         recyProjectList.layoutManager = LinearLayoutManager(this)
-
         val data = ArrayList<ProjectListModel>()
 
-        data.add(ProjectListModel("Expense","Shailendra Prasad","01 Dec 2021","02 Jan 2022","3 Day's 4 hr's","3 Day's","Completed"))
-        data.add(ProjectListModel("iPlus","Shailendra Prasad","10 Dec 2021","12 Dec 2021","6 Day's 2 hr's","6 Day's","In Peogress"))
-        data.add(ProjectListModel("Office App","Shailendra Prasad","03 Dec 2022","06 Jan 2022","3 Day's 4 hr's","3 Day's","Completed"))
+        val profileName = intent.getStringExtra("RESULT")
 
-        val dividerDrawable =
-            ContextCompat.getDrawable(this@ProjectListActivity, R.drawable.line_divider)
-        recyProjectList.addItemDecoration(DividerItemDecoration(dividerDrawable))
+        try {
+            val jsonarray = JSONArray(profileName)
+            for (i in 0..jsonarray.length() - 1) {
+                val jsonobject: JSONObject = jsonarray.getJSONObject(i)
+                val pTotalTime:String = jsonobject.getString("TotalTime")
+                val agTime:String = jsonobject.getString("AgreedTime")
+                val totaltime = timeConvert(pTotalTime.toUInt().toInt())
+                val agreedTime = timeConvert(agTime.toUInt().toInt())
+                data.add(
+                    ProjectListModel(
+                        jsonobject.getString("ProjectName"),
+                        jsonobject.getString("AllocatedBy"),
+                        jsonobject.getString("StartDate"),
+                        jsonobject.getString("AgreedDeliveryDate"),
+                        totaltime.toString(),
+                        agreedTime.toString(),
+                        ""
+                    )
+                )
+            }
 
-        val adapter = ProjectListAdapter(data)
-        recyProjectList.adapter = adapter
-        adapter.notifyDataSetChanged()
+            val dividerDrawable =
+                ContextCompat.getDrawable(this@ProjectListActivity, R.drawable.line_divider)
+            recyProjectList.addItemDecoration(DividerItemDecoration(dividerDrawable))
 
-        txtAdd.setOnClickListener(){
-            startActivity(Intent(this@ProjectListActivity,AddProjectActivity::class.java))
+            val adapter = ProjectListAdapter(data)
+            recyProjectList.adapter = adapter
+            adapter.notifyDataSetChanged()
+        } catch (e: Exception) {
+            ToastMessage.message(this, e.message.toString())
+        }
+
+        txtAdd.setOnClickListener() {
+            startActivity(Intent(this@ProjectListActivity, AddProjectActivity::class.java))
         }
 
 
@@ -59,7 +84,7 @@ class ProjectListActivity:AppCompatActivity() {
                     R.id.logOut ->
                         // LogOut().closeAllActivity(applicationContext)
 
-                        Log.d("qwe","qewrt");
+                        Log.d("qwe", "qewrt");
 
                 }
                 true
@@ -67,8 +92,17 @@ class ProjectListActivity:AppCompatActivity() {
             popupMenu.show()
         }
 
-        imvBack.setOnClickListener(){
+        imvBack.setOnClickListener() {
             finish()
         }
+    }
+
+    fun timeConvert(time: Int): String? {
+        var t = ""
+        val d = time / (24 * 60)
+        val h = time % (24 * 60) / 60
+        val m = time % (24 * 60) % 60
+        t =  d.toString() +" Days "+ h.toString() +" Hours"
+        return t
     }
 }

@@ -12,9 +12,14 @@ import com.bws.officeapp.registration.designationviewmodel.DesignationPram
 import com.bws.officeapp.registration.designationviewmodel.DesignationResponse
 import com.bws.officeapp.registration.registrationmodel.PramRegistration
 import com.bws.officeapp.registration.registrationmodel.ResgistrationResponse
+import com.bws.officeapp.timesheet.addproject.assignproject.AddProjectResponse
+import com.bws.officeapp.timesheet.addproject.userlistmodel.ResponseProjectList
+import com.bws.officeapp.timesheet.addproject.userlistmodel.UserListResponse
 import com.bws.officeapp.timesheet.dailitimesheet.dailytimesheetviewmodel.DailyTimeSheetResponse
 import com.bws.officeapp.timesheet.dailitimesheet.projectstatusviewmodel.ProjectListResponse
 import com.bws.officeapp.timesheet.dailitimesheet.projectstatusviewmodel.ProjectStausListResponse
+import com.bws.officeapp.timesheet.projectstatus.projectstatusviewmodel.ProjectStatusResponse
+import com.bws.officeapp.timesheet.searchproject.projectalocationsearch.ProjectAllocationResponse
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.Headers
@@ -59,7 +64,40 @@ interface ApiInterface {
     suspend fun callUserLeaveSummary(@Body pram:Param.PramUserLeaveSummary):Response<LeaveSummeryResponse>
 
     @Headers("API_KEY:A862A321-15CA-4265-B188-3959E38A94D2")
-    @POST("ApproveLeave")
+    @POST("PopulateDropDownList")
+    suspend fun callUserList(@Body pram:Param.PramUserList):Response<UserListResponse>
+
+    @Headers("API_KEY:A862A321-15CA-4265-B188-3959E38A94D2")
+    @POST("PopulateDropDownList")
+    suspend fun callProjectListForAddProject(@Body pram:Param.PramProjectList):Response<ResponseProjectList>
+
+    @Headers("API_KEY:A862A321-15CA-4265-B188-3959E38A94D2")
+    @POST("PopulateDropDownList")
     suspend fun callLeaveApprove(@Body pram:Param.PramApproveLeave):Response<LeaveApproveResponse>
+
+    @Headers("API_KEY:A862A321-15CA-4265-B188-3959E38A94D2")
+    @POST("ProjectAllocation")
+    suspend fun callProjectAllocation(@Body pram:Param.PramAddProject):Response<AddProjectResponse>
+
+
+    @Headers("API_KEY:A862A321-15CA-4265-B188-3959E38A94D2")
+    @POST("UserProjectDetails")
+    suspend fun callUserProjectDetails(@Body pram:Param.PramUserProjectDetails):Response<ProjectStatusResponse>
+
+    @Headers("API_KEY:A862A321-15CA-4265-B188-3959E38A94D2")
+    @POST("ProjectAllocationSearch")
+    suspend fun callProjectAllocationSearchByProjectName(@Body pram:Param.PramSearchByProjectName):Response<ProjectAllocationResponse>
+
+
+    @Headers("API_KEY:A862A321-15CA-4265-B188-3959E38A94D2")
+    @POST("ProjectAllocationSearch")
+    suspend fun callProjectAllocationSearchByProjectStatus(@Body pram:Param.PramSearchByProjectStatus):Response<ProjectAllocationResponse>
+
+
+
+    @Headers("API_KEY:A862A321-15CA-4265-B188-3959E38A94D2")
+    @POST("ProjectAllocationSearch")
+    suspend fun callProjectAllocationSearchByProjectDateRange(@Body pram:Param.PramSearchByProjectDateRange):Response<ProjectAllocationResponse>
+
 
 }
